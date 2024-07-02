@@ -9,7 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        EmptyView()
+        
+        NavigationStack {
+            List {
+                HStack {
+                    Image(systemName: "circle")
+                        .foregroundStyle(Color.pink)
+                    NavigationLink {
+                        Text("다음 화면입니다.")
+                    } label: {
+                        Text("투두1")
+                    }
+                }
+            }
+            .navigationTitle("ToDo 🏓")
+        }
     }
 }
 
