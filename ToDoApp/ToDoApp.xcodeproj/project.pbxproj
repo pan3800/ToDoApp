@@ -11,6 +11,7 @@
 		19071C9A2C33A88600E4FC4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19071C992C33A88600E4FC4C /* ContentView.swift */; };
 		19071C9C2C33A88700E4FC4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19071C9B2C33A88700E4FC4C /* Assets.xcassets */; };
 		19071C9F2C33A88700E4FC4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19071C9E2C33A88700E4FC4C /* Preview Assets.xcassets */; };
+		192A70CE2C33CF98008ACC1A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A70CD2C33CF98008ACC1A /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		19071C9B2C33A88700E4FC4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19071C9E2C33A88700E4FC4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		192A70CC2C33C3D6008ACC1A /* Structure, Class.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Structure, Class.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		192A70CD2C33CF98008ACC1A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				19071C972C33A88600E4FC4C /* ToDoAppApp.swift */,
 				19071C992C33A88600E4FC4C /* ContentView.swift */,
+				192A70CD2C33CF98008ACC1A /* Todo.swift */,
 				19071C9B2C33A88700E4FC4C /* Assets.xcassets */,
 				19071C9D2C33A88700E4FC4C /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19071C9A2C33A88600E4FC4C /* ContentView.swift in Sources */,
+				192A70CE2C33CF98008ACC1A /* Todo.swift in Sources */,
 				19071C982C33A88600E4FC4C /* ToDoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var todoList: [Todo] = [
+        Todo(title: "친구 만나기"),
+        Todo(title: "과제 제출하기"),
+        Todo(title: "푹쉬기")
+    ]
+    
     var body: some View {
         
         NavigationStack {
             List {
-                HStack {
-                    Image(systemName: "circle")
-                        .foregroundStyle(Color.pink)
-                    NavigationLink {
-                        Text("다음 화면입니다.")
-                    } label: {
-                        Text("투두1")
+                
+                ForEach(todoList) { todo in
+                    HStack {
+                        Image(systemName: "circle")
+                            .foregroundStyle(Color.pink)
+                        NavigationLink {
+                            Text("다음 화면입니다.")
+                        } label: {
+                            Text(todo.title)
+                        }
                     }
                 }
             }

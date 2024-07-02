@@ -96,3 +96,5 @@ class Todo {
         self.description = ""
     }
 }
+
+print("UUID: ", UUID())
