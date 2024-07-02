@@ -10,7 +10,7 @@ let pokemons: [String] = ["피카츄", "파이리", "꼬부기"]
 
 //기본타입: Character, String, Int, Double, Bool
 
-class Poketmon {
+struct Poketmon {
     var 이름: String = ""
     var 번호: Int = 0
     var 속성: String = ""
@@ -39,7 +39,7 @@ print("속성:", 포켓몬.속성)
 //print("학생의 이름:", 학생1.name)
 //print("학생의 학년:", 학생1.grade)
 
-class Student {
+struct Student {
     var name: String
     var grade: Int
 
@@ -60,7 +60,7 @@ print("----------------------------------")
 //파이리, No. 4, 불꽃 속성
 //꼬부기, No. 7, 물 속성
 
-class PocketMonster {
+struct PocketMonster {
     var name: String
     var number: Int
     var type: String
@@ -81,4 +81,18 @@ var pocketMonsters = [pikachu, charmander, squirtle]
 for pokemon in pocketMonsters {
     print("내 이름은 \(pokemon.name)야")
     print("나는 \(pokemon.number)번이고, \(pokemon.type) 속성이야")
+}
+
+//투두 타이틀, 완료여부, 상세정보
+
+class Todo {
+    var title: String
+    var isCompleted: Bool
+    var description: String
+    
+    init(title: String) {
+        self.title = title
+        self.isCompleted = false
+        self.description = ""
+    }
 }
