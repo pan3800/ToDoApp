@@ -19,6 +19,7 @@
 		19071C992C33A88600E4FC4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19071C9B2C33A88700E4FC4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19071C9E2C33A88700E4FC4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		192A70CC2C33C3D6008ACC1A /* Structure, Class.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Structure, Class.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		19071C8B2C33A88600E4FC4C = {
 			isa = PBXGroup;
 			children = (
+				192A70CC2C33C3D6008ACC1A /* Structure, Class.playground */,
 				19071C962C33A88600E4FC4C /* ToDoApp */,
 				19071C952C33A88600E4FC4C /* Products */,
 			);
