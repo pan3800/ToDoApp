@@ -22,6 +22,7 @@
 		19071C9E2C33A88700E4FC4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		192A70CC2C33C3D6008ACC1A /* Structure, Class.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Structure, Class.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		192A70CD2C33CF98008ACC1A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		195E10ED2C365A0C000F350F /* TernaryOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TernaryOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				192A70CC2C33C3D6008ACC1A /* Structure, Class.playground */,
+				195E10ED2C365A0C000F350F /* TernaryOperator.playground */,
 				19071C962C33A88600E4FC4C /* ToDoApp */,
 				19071C952C33A88600E4FC4C /* Products */,
 			);
