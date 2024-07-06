@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19AEF85A2C38FCA2005CF1D2 /* SampleLeeoSettingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AEF8592C38FCA2005CF1D2 /* SampleLeeoSettingAppApp.swift */; };
+		19AEF85C2C38FCA2005CF1D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AEF85B2C38FCA2005CF1D2 /* ContentView.swift */; };
+		19AEF85E2C38FCA2005CF1D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AEF85D2C38FCA2005CF1D2 /* Assets.xcassets */; };
+		19AEF8612C38FCA2005CF1D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AEF8602C38FCA2005CF1D2 /* Preview Assets.xcassets */; };
+		19AEF86B2C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AEF86A2C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.swift */; };
+		19AEF8752C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AEF8742C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.swift */; };
+		19AEF8772C38FCA2005CF1D2 /* SampleLeeoSettingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AEF8762C38FCA2005CF1D2 /* SampleLeeoSettingAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19AEF8672C38FCA2005CF1D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19AEF84E2C38FCA2005CF1D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19AEF8552C38FCA2005CF1D2;
+			remoteInfo = SampleLeeoSettingApp;
+		};
+		19AEF8712C38FCA2005CF1D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19AEF84E2C38FCA2005CF1D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19AEF8552C38FCA2005CF1D2;
+			remoteInfo = SampleLeeoSettingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19AEF8562C38FCA2005CF1D2 /* SampleLeeoSettingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleLeeoSettingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AEF8592C38FCA2005CF1D2 /* SampleLeeoSettingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLeeoSettingAppApp.swift; sourceTree = "<group>"; };
+		19AEF85B2C38FCA2005CF1D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		19AEF85D2C38FCA2005CF1D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19AEF8602C38FCA2005CF1D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19AEF8662C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleLeeoSettingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AEF86A2C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLeeoSettingAppTests.swift; sourceTree = "<group>"; };
+		19AEF8702C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleLeeoSettingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AEF8742C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLeeoSettingAppUITests.swift; sourceTree = "<group>"; };
+		19AEF8762C38FCA2005CF1D2 /* SampleLeeoSettingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLeeoSettingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19AEF8532C38FCA2005CF1D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19AEF8632C38FCA2005CF1D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19AEF86D2C38FCA2005CF1D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19AEF84D2C38FCA2005CF1D2 = {
+			isa = PBXGroup;
+			children = (
+				19AEF8582C38FCA2005CF1D2 /* SampleLeeoSettingApp */,
+				19AEF8692C38FCA2005CF1D2 /* SampleLeeoSettingAppTests */,
+				19AEF8732C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests */,
+				19AEF8572C38FCA2005CF1D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19AEF8572C38FCA2005CF1D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19AEF8562C38FCA2005CF1D2 /* SampleLeeoSettingApp.app */,
+				19AEF8662C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.xctest */,
+				19AEF8702C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19AEF8582C38FCA2005CF1D2 /* SampleLeeoSettingApp */ = {
+			isa = PBXGroup;
+			children = (
+				19AEF8592C38FCA2005CF1D2 /* SampleLeeoSettingAppApp.swift */,
+				19AEF85B2C38FCA2005CF1D2 /* ContentView.swift */,
+				19AEF85D2C38FCA2005CF1D2 /* Assets.xcassets */,
+				19AEF85F2C38FCA2005CF1D2 /* Preview Content */,
+			);
+			path = SampleLeeoSettingApp;
+			sourceTree = "<group>";
+		};
+		19AEF85F2C38FCA2005CF1D2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				19AEF8602C38FCA2005CF1D2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19AEF8692C38FCA2005CF1D2 /* SampleLeeoSettingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				19AEF86A2C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.swift */,
+			);
+			path = SampleLeeoSettingAppTests;
+			sourceTree = "<group>";
+		};
+		19AEF8732C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19AEF8742C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.swift */,
+				19AEF8762C38FCA2005CF1D2 /* SampleLeeoSettingAppUITestsLaunchTests.swift */,
+			);
+			path = SampleLeeoSettingAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19AEF8552C38FCA2005CF1D2 /* SampleLeeoSettingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19AEF87A2C38FCA2005CF1D2 /* Build configuration list for PBXNativeTarget "SampleLeeoSettingApp" */;
+			buildPhases = (
+				19AEF8522C38FCA2005CF1D2 /* Sources */,
+				19AEF8532C38FCA2005CF1D2 /* Frameworks */,
+				19AEF8542C38FCA2005CF1D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleLeeoSettingApp;
+			productName = SampleLeeoSettingApp;
+			productReference = 19AEF8562C38FCA2005CF1D2 /* SampleLeeoSettingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19AEF8652C38FCA2005CF1D2 /* SampleLeeoSettingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19AEF87D2C38FCA2005CF1D2 /* Build configuration list for PBXNativeTarget "SampleLeeoSettingAppTests" */;
+			buildPhases = (
+				19AEF8622C38FCA2005CF1D2 /* Sources */,
+				19AEF8632C38FCA2005CF1D2 /* Frameworks */,
+				19AEF8642C38FCA2005CF1D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19AEF8682C38FCA2005CF1D2 /* PBXTargetDependency */,
+			);
+			name = SampleLeeoSettingAppTests;
+			productName = SampleLeeoSettingAppTests;
+			productReference = 19AEF8662C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19AEF86F2C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19AEF8802C38FCA2005CF1D2 /* Build configuration list for PBXNativeTarget "SampleLeeoSettingAppUITests" */;
+			buildPhases = (
+				19AEF86C2C38FCA2005CF1D2 /* Sources */,
+				19AEF86D2C38FCA2005CF1D2 /* Frameworks */,
+				19AEF86E2C38FCA2005CF1D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19AEF8722C38FCA2005CF1D2 /* PBXTargetDependency */,
+			);
+			name = SampleLeeoSettingAppUITests;
+			productName = SampleLeeoSettingAppUITests;
+			productReference = 19AEF8702C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19AEF84E2C38FCA2005CF1D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					19AEF8552C38FCA2005CF1D2 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					19AEF8652C38FCA2005CF1D2 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 19AEF8552C38FCA2005CF1D2;
+					};
+					19AEF86F2C38FCA2005CF1D2 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 19AEF8552C38FCA2005CF1D2;
+					};
+				};
+			};
+			buildConfigurationList = 19AEF8512C38FCA2005CF1D2 /* Build configuration list for PBXProject "SampleLeeoSettingApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19AEF84D2C38FCA2005CF1D2;
+			productRefGroup = 19AEF8572C38FCA2005CF1D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19AEF8552C38FCA2005CF1D2 /* SampleLeeoSettingApp */,
+				19AEF8652C38FCA2005CF1D2 /* SampleLeeoSettingAppTests */,
+				19AEF86F2C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19AEF8542C38FCA2005CF1D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AEF8612C38FCA2005CF1D2 /* Preview Assets.xcassets in Resources */,
+				19AEF85E2C38FCA2005CF1D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19AEF8642C38FCA2005CF1D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19AEF86E2C38FCA2005CF1D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19AEF8522C38FCA2005CF1D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AEF85C2C38FCA2005CF1D2 /* ContentView.swift in Sources */,
+				19AEF85A2C38FCA2005CF1D2 /* SampleLeeoSettingAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19AEF8622C38FCA2005CF1D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AEF86B2C38FCA2005CF1D2 /* SampleLeeoSettingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19AEF86C2C38FCA2005CF1D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AEF8772C38FCA2005CF1D2 /* SampleLeeoSettingAppUITestsLaunchTests.swift in Sources */,
+				19AEF8752C38FCA2005CF1D2 /* SampleLeeoSettingAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19AEF8682C38FCA2005CF1D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19AEF8552C38FCA2005CF1D2 /* SampleLeeoSettingApp */;
+			targetProxy = 19AEF8672C38FCA2005CF1D2 /* PBXContainerItemProxy */;
+		};
+		19AEF8722C38FCA2005CF1D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19AEF8552C38FCA2005CF1D2 /* SampleLeeoSettingApp */;
+			targetProxy = 19AEF8712C38FCA2005CF1D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19AEF8782C38FCA2005CF1D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19AEF8792C38FCA2005CF1D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19AEF87B2C38FCA2005CF1D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SampleLeeoSettingApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.SampleLeeoSettingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19AEF87C2C38FCA2005CF1D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SampleLeeoSettingApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.SampleLeeoSettingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19AEF87E2C38FCA2005CF1D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.SampleLeeoSettingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleLeeoSettingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SampleLeeoSettingApp";
+			};
+			name = Debug;
+		};
+		19AEF87F2C38FCA2005CF1D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.SampleLeeoSettingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleLeeoSettingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SampleLeeoSettingApp";
+			};
+			name = Release;
+		};
+		19AEF8812C38FCA2005CF1D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.SampleLeeoSettingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SampleLeeoSettingApp;
+			};
+			name = Debug;
+		};
+		19AEF8822C38FCA2005CF1D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.SampleLeeoSettingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SampleLeeoSettingApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19AEF8512C38FCA2005CF1D2 /* Build configuration list for PBXProject "SampleLeeoSettingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AEF8782C38FCA2005CF1D2 /* Debug */,
+				19AEF8792C38FCA2005CF1D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19AEF87A2C38FCA2005CF1D2 /* Build configuration list for PBXNativeTarget "SampleLeeoSettingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AEF87B2C38FCA2005CF1D2 /* Debug */,
+				19AEF87C2C38FCA2005CF1D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19AEF87D2C38FCA2005CF1D2 /* Build configuration list for PBXNativeTarget "SampleLeeoSettingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AEF87E2C38FCA2005CF1D2 /* Debug */,
+				19AEF87F2C38FCA2005CF1D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19AEF8802C38FCA2005CF1D2 /* Build configuration list for PBXNativeTarget "SampleLeeoSettingAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AEF8812C38FCA2005CF1D2 /* Debug */,
+				19AEF8822C38FCA2005CF1D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19AEF84E2C38FCA2005CF1D2 /* Project object */;
+}

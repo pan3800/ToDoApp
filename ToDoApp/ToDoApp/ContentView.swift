@@ -19,7 +19,6 @@ struct ContentView: View {
         
         NavigationStack {
             List {
-                
                 ForEach(todoList) { todo in
                     HStack {
                         
@@ -29,37 +28,32 @@ struct ContentView: View {
                                 todo.isCompleted.toggle()
                             }
                         
-//                        if todo.isCompleted == true {
-//                            //투두가 완료 되었을때
-//                            Image(systemName: "circle.fill")
-//                                .foregroundStyle(Color.pink)
-//                                .onTapGesture {
-//                                    todo.isCompleted.toggle()
-//                                }
-//
-//                        } else {
-//                            //투두가 완료되지 않았을때
-//                            Image(systemName: "circle")
-//                                .foregroundStyle(Color.pink)
-//                                .onTapGesture {
-//                                    todo.isCompleted.toggle()
-//                                }
-//                        }
-                        
                         NavigationLink {
                             Text("다음 화면입니다.")
                         } label: {
                             Text(todo.title)
                                 .strikethrough(todo.isCompleted, color: Color.gray)
                                 .foregroundStyle(todo.isCompleted ? Color.gray : Color.primary)
-                            // isCompleted == true: gray
-                            // isCompleted == false: black
                             
                         }
                     }
+                    .listRowSeparator(.hidden) // 각 행마다 hidden 적용
                 }
             }
+            .listStyle(.plain)
             .navigationTitle("ToDo 🏓")
+            .toolbar {
+                ToolbarItem() {
+                    EditButton()
+                }
+                ToolbarItem() {
+                    Button(action: {
+                        print("플러스 버튼이 눌렸어요")
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            }
         }
     }
 }
