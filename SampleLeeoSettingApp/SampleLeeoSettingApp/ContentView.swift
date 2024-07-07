@@ -12,7 +12,30 @@ struct ContentView: View {
         NavigationView {
             List {
                 Section {
-                    Text("Lee")
+                    NavigationLink {
+                        Text("프로필 화면")
+                    } label: {
+                        HStack {
+                            Image(systemName: "airplane")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40, height: 40)
+                                .padding(.all, 10)
+                                .background(.green)
+                                .clipShape(Circle())
+                            
+                            
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("Leeo")
+                                    .font(.system(size: 24))
+                                    .fontWeight(.regular)
+                                Text("Apple ID, iCloud, 미디어 및 구입")
+                                    .font(.system(size: 14))
+                            }
+                            .padding(.leading, 6)
+                        }
+                        .padding(.vertical, 10)
+                    }
                 }
                 
                 Section {
