@@ -15,6 +15,7 @@
 		19D409BE2C3E592600A4B6E7 /* instagramCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409BD2C3E592600A4B6E7 /* instagramCloneUITests.swift */; };
 		19D409C02C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */; };
 		19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */; };
+		19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		19D409BD2C3E592600A4B6E7 /* instagramCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneUITests.swift; sourceTree = "<group>"; };
 		19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */,
 				19D409A42C3E592500A4B6E7 /* ContentView.swift */,
 				19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */,
+				19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */,
 				19D409A62C3E592600A4B6E7 /* Assets.xcassets */,
 				19D409A82C3E592600A4B6E7 /* Preview Content */,
 			);
@@ -263,6 +266,7 @@
 				19D409A52C3E592500A4B6E7 /* ContentView.swift in Sources */,
 				19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */,
 				19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */,
+				19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

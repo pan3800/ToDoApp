@@ -18,7 +18,7 @@ struct MainTabView: View {
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
-            Text("NewPost")
+            NewPostView()
                 .tabItem {
                     Image(systemName: "plus.square")
                 }
