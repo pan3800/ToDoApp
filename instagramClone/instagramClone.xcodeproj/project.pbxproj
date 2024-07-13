@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */; };
 		19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */; };
 		19D409A52C3E592500A4B6E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409A42C3E592500A4B6E7 /* ContentView.swift */; };
 		19D409A72C3E592600A4B6E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D409A62C3E592600A4B6E7 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFitAndFillView.swift; sourceTree = "<group>"; };
 		19D4099F2C3E592500A4B6E7 /* instagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneApp.swift; sourceTree = "<group>"; };
 		19D409A42C3E592500A4B6E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				19D409A42C3E592500A4B6E7 /* ContentView.swift */,
 				19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */,
 				19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */,
+				197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */,
 				19D409A62C3E592600A4B6E7 /* Assets.xcassets */,
 				19D409A82C3E592600A4B6E7 /* Preview Content */,
 			);
@@ -265,6 +268,7 @@
 			files = (
 				19D409A52C3E592500A4B6E7 /* ContentView.swift in Sources */,
 				19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */,
+				197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */,
 				19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */,
 				19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */,
 			);

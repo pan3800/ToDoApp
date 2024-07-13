@@ -43,16 +43,18 @@ struct NewPostView: View {
                 if let image = self.postImage { // self.postImage nil이 아니면 photosPicker로 사진이 장착한 후
                     image
                         .resizable()
-                        .aspectRatio(1, contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                        //.aspectRatio(1, contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: .infinity, maxHeight: 400)
+                        .clipped()
                     
                 } else { // 장착 전
                     Image(systemName: "photo.on.rectangle")
                         .resizable()
-                        .aspectRatio(1, contentMode: .fit)
+                        .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .padding()
                         .tint(.black)
+                        .padding()
                 }
             }
             .onChange(of: selectedItem) { newValue in
