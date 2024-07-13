@@ -44,14 +44,16 @@ struct NewPostView: View {
                     image
                         .resizable()
                         //.aspectRatio(1, contentMode: .fit)
-                        .aspectRatio(contentMode: .fill)
+                        //.aspectRatio(contentMode: .fill)
+                        .scaledToFill()
                         .frame(maxWidth: .infinity, maxHeight: 400)
                         .clipped()
                     
                 } else { // 장착 전
                     Image(systemName: "photo.on.rectangle")
                         .resizable()
-                        .scaledToFit()
+                        //.scaledToFit()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 200, height: 200)
                         .tint(.black)
                         .padding()
