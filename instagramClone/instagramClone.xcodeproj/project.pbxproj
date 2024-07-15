@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		194211042C4335270032300F /* Optional.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Optional.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		195D3BE62C45045F004026C5 /* ErrorHanding.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHanding.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFitAndFillView.swift; sourceTree = "<group>"; };
 		19D4099F2C3E592500A4B6E7 /* instagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneApp.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				194211042C4335270032300F /* Optional.playground */,
+				195D3BE62C45045F004026C5 /* ErrorHanding.playground */,
 				19D409A12C3E592500A4B6E7 /* instagramClone */,
 				19D409B22C3E592600A4B6E7 /* instagramCloneTests */,
 				19D409BC2C3E592600A4B6E7 /* instagramCloneUITests */,
