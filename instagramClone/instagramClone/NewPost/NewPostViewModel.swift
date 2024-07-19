@@ -8,6 +8,17 @@
 import SwiftUI
 import PhotosUI
 import FirebaseStorage
+import Firebase
+import FirebaseFirestoreSwift
+
+// struct Post : Encodable, Decodable {
+struct Post : Codable {
+    let id: String
+    let caption: String
+    var like: Int
+    let imageUrl: String
+    let date: Date
+}
 
 class NewPostViewModel : ObservableObject {
     @Published var caption = ""
@@ -24,10 +35,18 @@ class NewPostViewModel : ObservableObject {
     }
     
     func uploadPost() async {
-       
         guard let uiImage else { return }
-        let url = await uploadImage(uiImage: uiImage)
-        print("url:", url)
+        guard let imageUrl = await uploadImage(uiImage: uiImage) else { return }
+        
+        let postReference = Firestore.firestore().collection("posts").document()
+        let post = Post(id: postReference.documentID, caption: caption, like: 0, imageUrl: imageUrl, date: Date())
+        
+        do {
+            let encodedData = try Firestore.Encoder().encode(post)
+            try await postReference.setData(encodedData)
+        } catch {
+            print("DEBUG: Failed to upload post with error \(error.localizedDescription)")
+        }
     }
     
     func uploadImage(uiImage: UIImage) async -> String? {
