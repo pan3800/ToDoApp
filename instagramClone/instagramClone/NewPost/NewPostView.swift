@@ -65,6 +65,8 @@ struct NewPostView: View {
                 print("사진 공유")
                 Task {
                     await viewModel.uploadPost()
+                    viewModel.clearData()
+                    tabIndex = 0 
                 }
             } label: {
                 Text("공유")

@@ -11,14 +11,6 @@ import FirebaseStorage
 import Firebase
 import FirebaseFirestoreSwift
 
-// struct Post : Encodable, Decodable {
-struct Post : Codable {
-    let id: String
-    let caption: String
-    var like: Int
-    let imageUrl: String
-    let date: Date
-}
 
 class NewPostViewModel : ObservableObject {
     @Published var caption = ""
@@ -64,7 +56,12 @@ class NewPostViewModel : ObservableObject {
             print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
             return nil
         }
-        
-        return nil
+    }
+    
+    func clearData() {
+        caption = ""
+        selectedItem = nil
+        postImage = nil
+        uiImage = nil 
     }
 }
