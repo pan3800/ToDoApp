@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190944672C561AB500DAADB0 /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190944662C561AB500DAADB0 /* EnterPasswordView.swift */; };
+		190944692C561C7800DAADB0 /* EnterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190944682C561C7800DAADB0 /* EnterNameView.swift */; };
+		1909446B2C561D9B00DAADB0 /* EnterUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1909446A2C561D9B00DAADB0 /* EnterUsernameView.swift */; };
+		1909446D2C561EB600DAADB0 /* CompleteSingupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */; };
 		1917125B2C4B27EA00EBCB02 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917125A2C4B27EA00EBCB02 /* Post.swift */; };
 		1929D5ED2C48F674002C7231 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5EC2C48F674002C7231 /* FirebaseAuth */; };
 		1929D5EF2C48F674002C7231 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5EE2C48F674002C7231 /* FirebaseFirestore */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190944662C561AB500DAADB0 /* EnterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
+		190944682C561C7800DAADB0 /* EnterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
+		1909446A2C561D9B00DAADB0 /* EnterUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernameView.swift; sourceTree = "<group>"; };
+		1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSingupView.swift; sourceTree = "<group>"; };
 		1917125A2C4B27EA00EBCB02 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +131,10 @@
 				1993BA602C4CF5E600752DEC /* LoginView.swift */,
 				193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */,
 				193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */,
+				190944662C561AB500DAADB0 /* EnterPasswordView.swift */,
+				190944682C561C7800DAADB0 /* EnterNameView.swift */,
+				1909446A2C561D9B00DAADB0 /* EnterUsernameView.swift */,
+				1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -334,9 +346,13 @@
 				19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */,
 				197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */,
 				193BC2F92C51E4D200BC8F8B /* GradientBackgroundView.swift in Sources */,
+				190944692C561C7800DAADB0 /* EnterNameView.swift in Sources */,
+				1909446B2C561D9B00DAADB0 /* EnterUsernameView.swift in Sources */,
 				19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */,
+				1909446D2C561EB600DAADB0 /* CompleteSingupView.swift in Sources */,
 				19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */,
 				193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */,
+				190944672C561AB500DAADB0 /* EnterPasswordView.swift in Sources */,
 				1917125B2C4B27EA00EBCB02 /* Post.swift in Sources */,
 				1993BA612C4CF5E600752DEC /* LoginView.swift in Sources */,
 				192F27FB2C4A250B003A4B33 /* NewPostViewModel.swift in Sources */,
