@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct EnterNameView: View {
-    @Environment(\.dismiss) var dismiss
     var body: some View {
-        ZStack {
-            GradientBackgroundView()
+        SignupBackgroundView {
             VStack() {
                 Text("이름 입력")
                     .font(.title)
@@ -36,14 +34,6 @@ struct EnterNameView: View {
                 Spacer()
             }
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: Button(action: {
-                dismiss()
-            }) {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.blue)
-            })
     }
 }
 

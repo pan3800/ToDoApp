@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct EnterPasswordView: View {
-    @Environment(\.dismiss) var dismiss
     var body: some View {
-        ZStack {
-            GradientBackgroundView()
+        SignupBackgroundView {
             VStack() {
                 Text("비밀번호 만들기")
                     .font(.title)
@@ -42,14 +40,6 @@ struct EnterPasswordView: View {
                 Spacer()
             }
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: Button(action: {
-                dismiss()
-            }) {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.blue)
-            })
     }
 }
 
