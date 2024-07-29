@@ -24,25 +24,11 @@ struct LoginView: View {
                     
                     VStack(spacing: 20){
                         TextField("이메일주소", text: .constant(""))
-                            .textInputAutocapitalization(.never)
-                            .padding(12)
-                            .background(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.gray, lineWidth: 1)
-                            }
-                            .padding(.horizontal)
+                            .modifier(InstagramTextFieldModifier())
+                        
                         SecureField("비밀번호", text: .constant(""))
-                            .textInputAutocapitalization(.never)
-                            .padding(12)
-                            .background(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.gray, lineWidth: 1)
-                            }
-                            .padding(.horizontal)
+                            .modifier(InstagramTextFieldModifier())
+                        
                         Button {
                             print("로그인되었습니다.")
                         } label: {

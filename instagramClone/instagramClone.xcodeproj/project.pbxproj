@@ -20,6 +20,7 @@
 		192F27FB2C4A250B003A4B33 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */; };
 		193BC2F92C51E4D200BC8F8B /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */; };
 		193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */; };
+		19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */; };
 		197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */; };
 		1993BA612C4CF5E600752DEC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1993BA602C4CF5E600752DEC /* LoginView.swift */; };
 		19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */; };
@@ -62,6 +63,7 @@
 		193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
 		194211042C4335270032300F /* Optional.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Optional.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		195D3BE62C45045F004026C5 /* ErrorHanding.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHanding.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTextFieldModifier.swift; sourceTree = "<group>"; };
 		197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFitAndFillView.swift; sourceTree = "<group>"; };
 		1993BA602C4CF5E600752DEC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		19D4099F2C3E592500A4B6E7 /* instagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,11 +127,19 @@
 			path = NewPost;
 			sourceTree = "<group>";
 		};
+		19606B352C57462300BFD462 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */,
+				19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		1993BA622C4CF60900752DEC /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				1993BA602C4CF5E600752DEC /* LoginView.swift */,
-				193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */,
 				193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */,
 				190944662C561AB500DAADB0 /* EnterPasswordView.swift */,
 				190944682C561C7800DAADB0 /* EnterNameView.swift */,
@@ -167,6 +177,7 @@
 				19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */,
 				19D409A42C3E592500A4B6E7 /* ContentView.swift */,
 				19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */,
+				19606B352C57462300BFD462 /* Common */,
 				1993BA622C4CF60900752DEC /* Login */,
 				192F27F92C4A24D5003A4B33 /* NewPost */,
 				197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */,
@@ -352,6 +363,7 @@
 				1909446D2C561EB600DAADB0 /* CompleteSingupView.swift in Sources */,
 				19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */,
 				193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */,
+				19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */,
 				190944672C561AB500DAADB0 /* EnterPasswordView.swift in Sources */,
 				1917125B2C4B27EA00EBCB02 /* Post.swift in Sources */,
 				1993BA612C4CF5E600752DEC /* LoginView.swift in Sources */,

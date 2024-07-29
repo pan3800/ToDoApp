@@ -21,15 +21,7 @@ struct EnterNameView: View {
                     .padding(.bottom, 5)
                 
                 TextField("성명", text: .constant(""))
-                    .textInputAutocapitalization(.never)
-                    .padding(12)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.gray, lineWidth: 1)
-                    }
-                    .padding(.horizontal)
+                    .modifier(InstagramTextFieldModifier())
                 
                 NavigationLink {
                     EnterUsernameView()

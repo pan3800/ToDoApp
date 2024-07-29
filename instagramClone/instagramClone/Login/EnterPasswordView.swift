@@ -27,15 +27,7 @@ struct EnterPasswordView: View {
                     .padding(.bottom, 10)
                 
                 SecureField("비밀번호", text: .constant(""))
-                    .textInputAutocapitalization(.never)
-                    .padding(12)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.gray, lineWidth: 1)
-                    }
-                    .padding(.horizontal)
+                    .modifier(InstagramTextFieldModifier())
                 
                 NavigationLink {
                     EnterNameView()

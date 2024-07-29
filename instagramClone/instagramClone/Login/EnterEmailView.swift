@@ -27,15 +27,7 @@ struct EnterEmailView: View {
                     .padding(.bottom, 10)
                 
                 TextField("이메일주소", text: .constant(""))
-                    .textInputAutocapitalization(.never)
-                    .padding(12)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(.gray, lineWidth: 1)
-                    }
-                    .padding(.horizontal)
+                    .modifier(InstagramTextFieldModifier())
                 
                 NavigationLink {
                     // print("다음")
