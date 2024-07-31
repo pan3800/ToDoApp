@@ -1,34 +1,37 @@
 //
-//  EnterPasswordView.swift
+//  EnterEmailView.swift
 //  instagramClone
 //
-//  Created by 임채성 on 2024/07/28.
+//  Created by 임채성 on 2024/07/25.
 //
 
 import SwiftUI
 
-struct EnterPasswordView: View {
+struct EnterEmailView: View {
+    @EnvironmentObject var signupViewModel: SignupViewModel
+
     var body: some View {
         SignupBackgroundView {
             VStack() {
-                Text("비밀번호 만들기")
+                Text("이메일 주소 입력")
                     .font(.title)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     .padding(.bottom, 5)
                 
-                Text("다른 사람이 추측할 수 없는 6자 이상의 문자 또는 숫자로 비밀번호를 만드세요.")
+                Text("회원님에게 연락할 수 있는 이메일 주소를 입력하세요. 이 이메일 주소는 프로필에서 다른 사람에게 공개되지 않습니다.")
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     .padding(.bottom, 10)
                 
-                SecureField("비밀번호", text: .constant(""))
+                TextField("이메일주소", text: $signupViewModel.email)
                     .modifier(InstagramTextFieldModifier())
                 
                 NavigationLink {
-                    EnterNameView()
+                    // print("다음")
+                    EnterPasswordView()
                 } label: {
                     Text("다음")
                         .foregroundStyle(.white)
@@ -43,8 +46,8 @@ struct EnterPasswordView: View {
     }
 }
 
-struct EnterPasswordView_Previews: PreviewProvider {
+struct EnterEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        EnterPasswordView()
+        EnterEmailView()
     }
 }

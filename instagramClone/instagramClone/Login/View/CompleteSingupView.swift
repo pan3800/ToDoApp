@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CompleteSingupView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var signupViewModel: SignupViewModel
     var body: some View {
         ZStack {
             GradientBackgroundView()
@@ -30,7 +31,7 @@ struct CompleteSingupView: View {
                             .frame(width: 185, height: 185)
                     }
                     
-                Text("애구마님, Instagram에 오신 것을 환영합니다.")
+                Text("\(signupViewModel.username)님, Instagram에 오신 것을 환영합니다.")
                     .font(.title)
                     .padding(.top, 30)
                     .padding(.horizontal)
@@ -38,6 +39,7 @@ struct CompleteSingupView: View {
                 
                 BlueButtonView {
                     print("완료")
+                    signupViewModel.createUser()
                 } label: {
                     Text("완료")
 

@@ -18,6 +18,7 @@
 		1929D5F32C48F674002C7231 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5F22C48F674002C7231 /* FirebaseStorage */; };
 		192F27F82C4A23F9003A4B33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */; };
 		192F27FB2C4A250B003A4B33 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */; };
+		1939F1B82C59DCE00036739C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939F1B72C59DCE00036739C /* SignupViewModel.swift */; };
 		193BC2F92C51E4D200BC8F8B /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */; };
 		193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */; };
 		19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */; };
@@ -61,6 +62,7 @@
 		1917125A2C4B27EA00EBCB02 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
+		1939F1B72C59DCE00036739C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
 		194211042C4335270032300F /* Optional.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Optional.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -131,6 +133,27 @@
 			path = NewPost;
 			sourceTree = "<group>";
 		};
+		1939F1B92C59DCF60036739C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1993BA602C4CF5E600752DEC /* LoginView.swift */,
+				193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */,
+				190944662C561AB500DAADB0 /* EnterPasswordView.swift */,
+				190944682C561C7800DAADB0 /* EnterNameView.swift */,
+				1909446A2C561D9B00DAADB0 /* EnterUsernameView.swift */,
+				1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1939F1BA2C59DD0A0036739C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1939F1B72C59DCE00036739C /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		19606B352C57462300BFD462 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,12 +168,8 @@
 		1993BA622C4CF60900752DEC /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1993BA602C4CF5E600752DEC /* LoginView.swift */,
-				193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */,
-				190944662C561AB500DAADB0 /* EnterPasswordView.swift */,
-				190944682C561C7800DAADB0 /* EnterNameView.swift */,
-				1909446A2C561D9B00DAADB0 /* EnterUsernameView.swift */,
-				1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */,
+				1939F1B92C59DCF60036739C /* View */,
+				1939F1BA2C59DD0A0036739C /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -359,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1939F1B82C59DCE00036739C /* SignupViewModel.swift in Sources */,
 				19D409A52C3E592500A4B6E7 /* ContentView.swift in Sources */,
 				19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */,
 				197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */,
