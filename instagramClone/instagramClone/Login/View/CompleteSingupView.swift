@@ -38,8 +38,9 @@ struct CompleteSingupView: View {
                 Spacer()
                 
                 BlueButtonView {
-                    print("완료")
-                    signupViewModel.createUser()
+                    Task {
+                        await signupViewModel.createUser()
+                    }
                 } label: {
                     Text("완료")
 
