@@ -14,16 +14,17 @@ class SignupViewModel : ObservableObject{
     @Published var name = ""
     @Published var username = ""
     
+    @Published var currentUserSession: FirebaseAuth.User?
+    
     func createUser() async {
         print("email:", email)
         print("password:", password)
         print("name:", name)
         print("username:", username)
+        
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
-            
-            let currentUser = result.user
-            print("uid:", currentUser.uid)
+            currentUserSession = result.user
         } catch {
             print("DEBUG: Faild to create user with error \(error.localizedDescription)")
         }

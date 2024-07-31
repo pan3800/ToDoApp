@@ -12,7 +12,7 @@ struct ContentView: View {
     @StateObject var signupViewModel = SignupViewModel()
     
     var body: some View {
-        if Auth.auth().currentUser != nil {
+        if signupViewModel.currentUserSession != nil {
             MainTabView()
         } else {
             LoginView()
