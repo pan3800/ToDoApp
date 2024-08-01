@@ -10,9 +10,10 @@ import FirebaseAuth
 
 struct ContentView: View {
     @StateObject var signupViewModel = SignupViewModel()
+    @StateObject var authManager = AuthManager.shared
     
     var body: some View {
-        if signupViewModel.currentUserSession != nil {
+        if authManager.currentUserSession != nil {
             MainTabView()
         } else {
             LoginView()

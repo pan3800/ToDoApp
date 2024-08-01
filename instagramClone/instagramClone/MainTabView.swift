@@ -31,7 +31,7 @@ struct MainTabView: View {
             VStack {
                 Text("Reels")
                 Button {
-                    try? Auth.auth().signOut()
+                    AuthManager.shared.signout()
                 } label: {
                     Text("로그아웃")
                 }
