@@ -26,6 +26,7 @@
 		19606B392C574F7400BFD462 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B382C574F7400BFD462 /* BlueButtonView.swift */; };
 		197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */; };
 		1993BA612C4CF5E600752DEC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1993BA602C4CF5E600752DEC /* LoginView.swift */; };
+		1993E6232C5DD9DF002F8AB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1993E6222C5DD9DF002F8AB8 /* User.swift */; };
 		19B3137C2C5B3BF500E1C96C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3137B2C5B3BF500E1C96C /* AuthManager.swift */; };
 		19D409A32C3E592500A4B6E7 /* instagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409A22C3E592500A4B6E7 /* instagramCloneApp.swift */; };
 		19D409A52C3E592500A4B6E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409A42C3E592500A4B6E7 /* ContentView.swift */; };
@@ -73,6 +74,7 @@
 		19606B382C574F7400BFD462 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFitAndFillView.swift; sourceTree = "<group>"; };
 		1993BA602C4CF5E600752DEC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1993E6222C5DD9DF002F8AB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		19B313792C5B387E00E1C96C /* static, singleton.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "static, singleton.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		19B3137B2C5B3BF500E1C96C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		19D4099F2C3E592500A4B6E7 /* instagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1917125A2C4B27EA00EBCB02 /* Post.swift */,
+				1993E6222C5DD9DF002F8AB8 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,7 +134,6 @@
 			children = (
 				19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */,
 				192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */,
-				191712592C4B27CA00EBCB02 /* Model */,
 			);
 			path = NewPost;
 			sourceTree = "<group>";
@@ -218,6 +220,7 @@
 				19B3137A2C5B3BB500E1C96C /* Manager */,
 				1993BA622C4CF60900752DEC /* Login */,
 				192F27F92C4A24D5003A4B33 /* NewPost */,
+				191712592C4B27CA00EBCB02 /* Model */,
 				197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */,
 				19D409A62C3E592600A4B6E7 /* Assets.xcassets */,
 				192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */,
@@ -399,6 +402,7 @@
 				190944692C561C7800DAADB0 /* EnterNameView.swift in Sources */,
 				1909446B2C561D9B00DAADB0 /* EnterUsernameView.swift in Sources */,
 				19606B372C5748BA00BFD462 /* SignupBackgroundView.swift in Sources */,
+				1993E6232C5DD9DF002F8AB8 /* User.swift in Sources */,
 				19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */,
 				1909446D2C561EB600DAADB0 /* CompleteSingupView.swift in Sources */,
 				19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */,
