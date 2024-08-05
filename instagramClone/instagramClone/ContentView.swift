@@ -13,7 +13,7 @@ struct ContentView: View {
     @StateObject var authManager = AuthManager.shared
     
     var body: some View {
-        if authManager.currentUserSession != nil {
+        if authManager.currentAuthUser != nil {
             MainTabView()
         } else {
             LoginView()
