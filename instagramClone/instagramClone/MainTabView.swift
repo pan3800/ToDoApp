@@ -42,7 +42,8 @@ struct MainTabView: View {
                     Image(systemName: "popcorn")
                 }
                 .tag(3)
-            Text("Profile")
+            // Text("Profile")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.circle")
                 }

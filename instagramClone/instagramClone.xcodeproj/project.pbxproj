@@ -38,6 +38,7 @@
 		19D409C02C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */; };
 		19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */; };
 		19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */; };
+		19E39EE32C6F342A0020CEFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39EE22C6F342A0020CEFC /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		19E39EE22C6F342A0020CEFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,10 +224,11 @@
 				19606B352C57462300BFD462 /* Common */,
 				19B3137A2C5B3BB500E1C96C /* Manager */,
 				1993BA622C4CF60900752DEC /* Login */,
-				192F27F92C4A24D5003A4B33 /* NewPost */,
 				191712592C4B27CA00EBCB02 /* Model */,
-				197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */,
+				192F27F92C4A24D5003A4B33 /* NewPost */,
+				19E39EE42C6F342F0020CEFC /* Profile */,
 				19D409A62C3E592600A4B6E7 /* Assets.xcassets */,
+				197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */,
 				192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */,
 				19D409A82C3E592600A4B6E7 /* Preview Content */,
 			);
@@ -255,6 +258,14 @@
 				19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */,
 			);
 			path = instagramCloneUITests;
+			sourceTree = "<group>";
+		};
+		19E39EE42C6F342F0020CEFC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				19E39EE22C6F342A0020CEFC /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +428,7 @@
 				1917125B2C4B27EA00EBCB02 /* Post.swift in Sources */,
 				1993BA612C4CF5E600752DEC /* LoginView.swift in Sources */,
 				192F27FB2C4A250B003A4B33 /* NewPostViewModel.swift in Sources */,
+				19E39EE32C6F342A0020CEFC /* ProfileView.swift in Sources */,
 				192477D22C60B7A40010A0A4 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
