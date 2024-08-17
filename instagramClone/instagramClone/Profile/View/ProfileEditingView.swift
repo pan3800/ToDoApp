@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileEditingView: View {
     @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel = ProfileViewModel()
+    
     var body: some View {
         VStack {
             Image("image_dog")
@@ -23,7 +25,7 @@ struct ProfileEditingView: View {
                 Text("이름")
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
-                TextField("이름", text: .constant("고양이대장군"))
+                TextField("이름", text: $viewModel.name)
                     .font(.title2)
                 Divider()
             }
@@ -34,7 +36,7 @@ struct ProfileEditingView: View {
                 Text("사용자 이름")
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
-                TextField("사용자 이름", text: .constant("general.cat"))
+                TextField("사용자 이름", text: $viewModel.username)
                     .font(.title2)
                 Divider()
             }
@@ -45,7 +47,7 @@ struct ProfileEditingView: View {
                 Text("소개")
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
-                TextField("소개", text: .constant("세계를 정복한다."))
+                TextField("소개", text: $viewModel.bie)
                     .font(.title2)
                 Divider()
             }
