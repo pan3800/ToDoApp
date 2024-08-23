@@ -23,4 +23,20 @@ class ProfileViewModel: ObservableObject {
         self.username = tempUser?.username ?? ""
         self.bie = tempUser?.bie ?? ""
     }
+    
+    func updateUser() {
+        // and && ,
+        // or ||
+        if name != "", name != user?.name {
+            user?.name = name
+        }
+        if username.isEmpty == false, username != user?.username {
+            user?.username = username
+        }
+        if !bie.isEmpty, bie != user?.bie {
+            user?.bie = bie
+        }
+    }
+    
+    
 }

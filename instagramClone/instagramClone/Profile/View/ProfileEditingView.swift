@@ -61,6 +61,7 @@ struct ProfileEditingView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
+                    viewModel.updateUser()
                     dismiss()
                 } label: {
                     Image(systemName: "arrow.backward")

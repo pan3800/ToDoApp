@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var viewModel = ProfileViewModel()
+    @StateObject var viewModel = ProfileViewModel()
     
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 2),
@@ -20,7 +20,7 @@ struct ProfileView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Text("\(viewModel.user?.username ?? "")")
+                    Text("\(viewModel.username)")
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -54,12 +54,12 @@ struct ProfileView: View {
                     }
                     .padding(.horizontal)
                     
-                    Text("\(viewModel.user?.name ?? "")")
+                    Text("\(viewModel.name)")
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     
-                    Text("\(viewModel.user?.bie ?? "")")
+                    Text("\(viewModel.bie)")
                         .font(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
