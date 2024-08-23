@@ -64,6 +64,8 @@ class AuthManager : ObservableObject{
         do {
             self.currentUser = try await Firestore.firestore().collection("users").document(userId).getDocument(as: User.self)
             print("currentUser:", currentUser)
+            let result = try await Firestore.firestore().collection("users").document(userId).getDocument()
+            print(result.data())
         } catch {
             print("DEBUG: Faild to load user data with error \(error.localizedDescription)")
         }

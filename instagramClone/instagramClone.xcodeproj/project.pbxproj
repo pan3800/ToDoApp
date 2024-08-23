@@ -79,6 +79,7 @@
 		19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTextFieldModifier.swift; sourceTree = "<group>"; };
 		19606B362C5748BA00BFD462 /* SignupBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBackgroundView.swift; sourceTree = "<group>"; };
 		19606B382C574F7400BFD462 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		1972151F2C78662F00A51F81 /* Dictionary.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Dictionary.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFitAndFillView.swift; sourceTree = "<group>"; };
 		1993BA602C4CF5E600752DEC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1993E6222C5DD9DF002F8AB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 		19D409962C3E592500A4B6E7 = {
 			isa = PBXGroup;
 			children = (
+				1972151F2C78662F00A51F81 /* Dictionary.playground */,
 				19B313792C5B387E00E1C96C /* static, singleton.playground */,
 				194211042C4335270032300F /* Optional.playground */,
 				195D3BE62C45045F004026C5 /* ErrorHanding.playground */,
