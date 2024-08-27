@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileEditingView: View {
     @Environment(\.dismiss) var dismiss
@@ -13,14 +14,35 @@ struct ProfileEditingView: View {
     
     var body: some View {
         VStack {
-            Image("image_dog")
-                .resizable()
-                .frame(width: 75, height: 75)
-                .clipShape(Circle())
-                .padding(.bottom, 10)
-            Text("사진 또는 아바타 수정")
-                .foregroundStyle(.blue)
-            
+            PhotosPicker(selection: $viewModel.selectedItem) {
+                VStack {
+                    if let profileImage = viewModel.profileImage {
+                        profileImage
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                            .clipShape(Circle())
+                            .padding(.bottom, 10)
+                    } else {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                            // 방법 1
+                            // .foregroundStyle(Color.gray.opacity(0.5))
+                            .foregroundStyle(Color(.systemGray3))
+                            .clipShape(Circle())
+                            .padding(.bottom, 10)
+                    }
+                    
+                    Text("사진 또는 아바타 수정")
+                        .foregroundStyle(.blue)
+                }
+            }
+            .onChange(of: viewModel.selectedItem) { newValue in
+                Task {
+                    await viewModel.convertImage(item: newValue)
+                }
+            }
+
             VStack(alignment: .leading, spacing: 5) {
                 Text("이름")
                     .foregroundStyle(.gray)

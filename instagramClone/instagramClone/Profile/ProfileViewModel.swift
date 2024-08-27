@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import PhotosUI
 
 class ProfileViewModel: ObservableObject {
     @Published var user: User?
@@ -14,6 +15,10 @@ class ProfileViewModel: ObservableObject {
     @Published var name: String
     @Published var username: String
     @Published var bie: String
+    
+    @Published var selectedItem: PhotosPickerItem?
+    @Published var profileImage: Image?
+    @Published var uiImage: UIImage?
     
     init() {
         // self.user = AuthManager.shared.currentUser
@@ -23,6 +28,14 @@ class ProfileViewModel: ObservableObject {
         self.name = tempUser?.name ?? ""
         self.username = tempUser?.username ?? ""
         self.bie = tempUser?.bie ?? ""
+    }
+    
+    func convertImage(item: PhotosPickerItem?) async {
+        guard let item = item else { return }
+        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
+        guard let uiImage = UIImage(data: data) else { return }
+        self.profileImage = Image(uiImage: uiImage)
+        self.uiImage = uiImage
     }
     
     func updateUser() async {

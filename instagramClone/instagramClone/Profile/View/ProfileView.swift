@@ -25,11 +25,20 @@ struct ProfileView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     HStack {
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .frame(width: 75, height: 75)
-                            .opacity(0.6)
-                            .frame(maxWidth: .infinity)
+                        if let profileImage = viewModel.profileImage {
+                            profileImage
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .clipShape(Circle())
+                                .padding(.bottom, 10)
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .foregroundStyle(Color(.systemGray3))
+                                .clipShape(Circle())
+                                .padding(.bottom, 10)
+                        }
                         
                         VStack {
                             Text("124")
