@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
@@ -31,6 +32,15 @@ struct ProfileView: View {
                                 .frame(width: 75, height: 75)
                                 .clipShape(Circle())
                                 .padding(.bottom, 10)
+                            
+                        } else if let imageUrl = viewModel.user?.profileImageUrl {
+                            let url = URL(string: imageUrl)
+                            KFImage(url)
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .clipShape(Circle())
+                                .padding(.bottom, 10)
+                            
                         } else {
                             Image(systemName: "person.circle.fill")
                                 .resizable()

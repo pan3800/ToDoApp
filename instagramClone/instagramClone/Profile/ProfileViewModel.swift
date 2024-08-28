@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 import PhotosUI
+import FirebaseStorage
 
 class ProfileViewModel: ObservableObject {
     @Published var user: User?
@@ -67,20 +68,38 @@ class ProfileViewModel: ObservableObject {
         var editedData: [String: Any] = [:]
         
         if name != "", name != user?.name {
-            // user?.name = name
             editedData["name"] = name
         }
         if username.isEmpty == false, username != user?.username {
-            //user?.username = username
             editedData["username"] = username
         }
         if !bie.isEmpty, bie != user?.bie {
-            //user?.bie = bie
             editedData["bie"] = bie
+        }
+        if let uiImage = self.uiImage {
+            let imageUrl = await uploadImage(uiImage: uiImage)
+            editedData["profileImageUrl"] = imageUrl
         }
         
         if !editedData.isEmpty, let userId = user?.id {
             try await Firestore.firestore().collection("users").document(userId).updateData(editedData)
+        }
+    }
+    
+    func uploadImage(uiImage: UIImage) async -> String? {
+        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
+        let fileName = UUID().uuidString
+        print("fileName:", fileName)
+        let reference = Storage.storage().reference(withPath: "/profile/\(fileName)")
+        
+        do {
+            let metaData = try await reference.putDataAsync(imageData)
+            print("metaData:", metaData)
+            let url = try await reference.downloadURL()
+            return url.absoluteString
+        } catch {
+            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+            return nil
         }
     }
     

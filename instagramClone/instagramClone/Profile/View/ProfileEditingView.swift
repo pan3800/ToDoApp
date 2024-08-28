@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import Kingfisher
 
 struct ProfileEditingView: View {
     @Environment(\.dismiss) var dismiss
@@ -22,12 +23,28 @@ struct ProfileEditingView: View {
                             .frame(width: 75, height: 75)
                             .clipShape(Circle())
                             .padding(.bottom, 10)
+                    } else if let imageUrl = viewModel.user?.profileImageUrl {
+                        let url = URL(string: imageUrl)
+                        KFImage(url)
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                            .clipShape(Circle())
+                            .padding(.bottom, 10)
+                        
+//                        AsyncImage(url: url) { image in
+//                            image
+//                                .resizable()
+//                                .frame(width: 75, height: 75)
+//                                .clipShape(Circle())
+//                                .padding(.bottom, 10)
+//                        } placeholder: {
+//                            ProgressView()
+//                        }
+                        
                     } else {
                         Image(systemName: "person.circle.fill")
                             .resizable()
                             .frame(width: 75, height: 75)
-                            // 방법 1
-                            // .foregroundStyle(Color.gray.opacity(0.5))
                             .foregroundStyle(Color(.systemGray3))
                             .clipShape(Circle())
                             .padding(.bottom, 10)
