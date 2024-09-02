@@ -40,16 +40,16 @@ struct ProfileEditingView: View {
 //                        } placeholder: {
 //                            ProgressView()
 //                        }
-                        
+
                     } else {
                         Image(systemName: "person.circle.fill")
                             .resizable()
                             .frame(width: 75, height: 75)
                             .foregroundStyle(Color(.systemGray3))
+                        
                             .clipShape(Circle())
                             .padding(.bottom, 10)
                     }
-                    
                     Text("사진 또는 아바타 수정")
                         .foregroundStyle(.blue)
                 }
@@ -59,11 +59,12 @@ struct ProfileEditingView: View {
                     await viewModel.convertImage(item: newValue)
                 }
             }
-
+            
             VStack(alignment: .leading, spacing: 5) {
                 Text("이름")
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
+//                TextField("이름", text: .constant("고양이대장군"))
                 TextField("이름", text: $viewModel.name)
                     .font(.title2)
                 Divider()
@@ -71,27 +72,33 @@ struct ProfileEditingView: View {
             .padding(.horizontal)
             .padding(.top, 10)
             
+            
             VStack(alignment: .leading, spacing: 5) {
                 Text("사용자 이름")
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
+//                TextField("사용자 이름", text: .constant("general.cat"))
                 TextField("사용자 이름", text: $viewModel.username)
                     .font(.title2)
                 Divider()
             }
             .padding(.horizontal)
             .padding(.top, 10)
+
             
             VStack(alignment: .leading, spacing: 5) {
                 Text("소개")
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
+//                TextField("소개", text: .constant("세계를 정복한다."))
                 TextField("소개", text: $viewModel.bie)
                     .font(.title2)
                 Divider()
             }
             .padding(.horizontal)
             .padding(.top, 10)
+
+            
             
             Spacer()
         }

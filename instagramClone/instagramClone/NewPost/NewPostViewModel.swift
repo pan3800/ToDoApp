@@ -29,9 +29,10 @@ class NewPostViewModel : ObservableObject {
     func uploadPost() async {
         guard let uiImage else { return }
         guard let imageUrl = await uploadImage(uiImage: uiImage) else { return }
+        guard let userId = AuthManager.shared.currentAuthUser?.uid else { return }
         
         let postReference = Firestore.firestore().collection("posts").document()
-        let post = Post(id: postReference.documentID, caption: caption, like: 0, imageUrl: imageUrl, date: Date())
+        let post = Post(id: postReference.documentID, userId: userId, caption: caption, like: 0, imageUrl: imageUrl, date: Date())
         
         do {
             let encodedData = try Firestore.Encoder().encode(post)

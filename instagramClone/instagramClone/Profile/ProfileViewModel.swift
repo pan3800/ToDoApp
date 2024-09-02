@@ -2,15 +2,16 @@
 //  ProfileViewModel.swift
 //  instagramClone
 //
-//  Created by 임채성 on 2024/08/17.
+//  Created by agmma on 5/4/24.
 //
 
 import SwiftUI
-import FirebaseFirestore
+import Firebase
 import PhotosUI
 import FirebaseStorage
 
-class ProfileViewModel: ObservableObject {
+
+class ProfileViewModel : ObservableObject{
     @Published var user: User?
     
     @Published var name: String
@@ -22,7 +23,7 @@ class ProfileViewModel: ObservableObject {
     @Published var uiImage: UIImage?
     
     init() {
-        // self.user = AuthManager.shared.currentUser
+//        self.user = AuthManager.shared.currentUser
         let tempUser = AuthManager.shared.currentUser
         self.user = tempUser
         
@@ -38,19 +39,17 @@ class ProfileViewModel: ObservableObject {
         self.profileImage = Image(uiImage: uiImage)
         self.uiImage = uiImage
     }
-    
+
     func updateUser() async {
         do {
             try await updateUserRemote()
             updateUserLocal()
         } catch {
-            print("DEBUG: Faild to update user data with error \(error.localizedDescription)")
+            print("DEBUG: Failed to update user data with error \(error.localizedDescription)")
         }
     }
     
     func updateUserLocal() {
-        // and && ,
-        // or ||
         if name != "", name != user?.name {
             user?.name = name
         }
@@ -63,8 +62,6 @@ class ProfileViewModel: ObservableObject {
     }
     
     func updateUserRemote() async throws {
-        // 딕셔너리 초기화 방법 1 -> var editedData1 = [String: Any]()
-        // 딕셔너리 초기화 방법 2
         var editedData: [String: Any] = [:]
         
         if name != "", name != user?.name {
@@ -84,6 +81,8 @@ class ProfileViewModel: ObservableObject {
         if !editedData.isEmpty, let userId = user?.id {
             try await Firestore.firestore().collection("users").document(userId).updateData(editedData)
         }
+        
+        
     }
     
     func uploadImage(uiImage: UIImage) async -> String? {
@@ -102,6 +101,5 @@ class ProfileViewModel: ObservableObject {
             return nil
         }
     }
-    
 }
 
