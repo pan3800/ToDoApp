@@ -22,6 +22,8 @@ class ProfileViewModel : ObservableObject{
     @Published var profileImage: Image?
     @Published var uiImage: UIImage?
     
+    @Published var posts: [Post] = []
+    
     init() {
 //        self.user = AuthManager.shared.currentUser
         let tempUser = AuthManager.shared.currentUser
@@ -99,6 +101,25 @@ class ProfileViewModel : ObservableObject{
         } catch {
             print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
             return nil
+        }
+    }
+    
+    func loadUserPosts() async {
+        do {
+            let documents = try await Firestore.firestore().collection("posts")
+                .order(by: "date", descending: true)
+                .whereField("userId", isEqualTo: user?.id ?? "").getDocuments().documents
+            
+            var posts: [Post] = []
+            for document in documents {
+                let post = try document.data(as: Post.self)
+                posts.append(post)
+            }
+            
+            self.posts = posts
+            
+        } catch {
+            print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
         }
     }
 }

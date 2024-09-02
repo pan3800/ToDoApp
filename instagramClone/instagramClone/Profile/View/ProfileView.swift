@@ -101,23 +101,20 @@ struct ProfileView: View {
                         .padding()
                     
                     LazyVGrid(columns: columns ,spacing: 2) {
-                        ForEach(0..<10) { _ in
-                            Image("profile_bear")
+//                        ForEach(0..<10) { _ in
+//
+//                        }
+                        ForEach(viewModel.posts) { post in
+                            
+                            let url = URL(string: post.imageUrl)
+                            KFImage(url)
                                 .resizable()
-                                .scaledToFit()
-                            Image("profile_cat")
-                                .resizable()
-                                .scaledToFit()
-                            Image("profile_fox")
-                                .resizable()
-                                .scaledToFit()
-                            Image("profile_penguin")
-                                .resizable()
-                                .scaledToFit()
-                            Image("profile_tiger")
-                                .resizable()
-                                .scaledToFit()
+                                //.scaledToFill()
+                                .aspectRatio(1, contentMode: .fill)
                         }
+                    }
+                    .task {
+                       await viewModel.loadUserPosts()
                     }
                     
                     Spacer()
