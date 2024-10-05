@@ -7,10 +7,16 @@
 
 import SwiftUI
 import PhotosUI
+import FirebaseStorage
 
 struct ImageSelection {
     let image: Image
     let uiImage: UIImage
+}
+
+enum ImagePath {
+    case post
+    case profile
 }
 
 class ImageManager {
@@ -23,6 +29,32 @@ class ImageManager {
         
         let imageSelection = ImageSelection(image: image, uiImage: uiImage)
         return imageSelection
+    }
+    
+    static func uploadImage(uiImage: UIImage, path: ImagePath) async -> String? {
+        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
+        let fileName = UUID().uuidString
+        print("fileName:", fileName)
+        var imagePath: String = ""
+        
+        switch path {
+        case ImagePath.post:
+            imagePath = "images"
+        case ImagePath.profile:
+            imagePath = "profiles"
+        }
+        
+        let reference = Storage.storage().reference(withPath: "/\(imagePath)/\(fileName)")
+        
+        do {
+            let metaData = try await reference.putDataAsync(imageData)
+            print("metaData:", metaData)
+            let url = try await reference.downloadURL()
+            return url.absoluteString
+        } catch {
+            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+            return nil
+        }
     }
     
 }

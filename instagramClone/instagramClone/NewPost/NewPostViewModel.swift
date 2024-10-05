@@ -32,7 +32,9 @@ class NewPostViewModel : ObservableObject {
     
     func uploadPost() async {
         guard let uiImage else { return }
-        guard let imageUrl = await uploadImage(uiImage: uiImage) else { return }
+        // guard let imageUrl = await uploadImage(uiImage: uiImage) else { return }
+        // guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: "images") else { return }
+        guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: .post) else { return }
         guard let userId = AuthManager.shared.currentAuthUser?.uid else { return }
         
         let postReference = Firestore.firestore().collection("posts").document()
@@ -46,22 +48,22 @@ class NewPostViewModel : ObservableObject {
         }
     }
     
-    func uploadImage(uiImage: UIImage) async -> String? {
-        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
-        let fileName = UUID().uuidString
-        print("fileName:", fileName)
-        let reference = Storage.storage().reference(withPath: "/images/\(fileName)")
-        
-        do {
-            let metaData = try await reference.putDataAsync(imageData)
-            print("metaData:", metaData)
-            let url = try await reference.downloadURL()
-            return url.absoluteString
-        } catch {
-            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
-            return nil
-        }
-    }
+//    func uploadImage(uiImage: UIImage) async -> String? {
+//        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
+//        let fileName = UUID().uuidString
+//        print("fileName:", fileName)
+//        let reference = Storage.storage().reference(withPath: "/images/\(fileName)")
+//
+//        do {
+//            let metaData = try await reference.putDataAsync(imageData)
+//            print("metaData:", metaData)
+//            let url = try await reference.downloadURL()
+//            return url.absoluteString
+//        } catch {
+//            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+//            return nil
+//        }
+//    }
     
     func clearData() {
         caption = ""

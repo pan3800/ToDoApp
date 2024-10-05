@@ -79,10 +79,9 @@ class ProfileViewModel : ObservableObject {
             editedData["bie"] = bie
         }
         if let uiImage = self.uiImage {
-//            let imageUrl = await uploadImage(uiImage: uiImage)
-//            guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: "profiles") else { return }
-//            guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: .profile) else { return }
-//            editedData["profileImageUrl"] = imageUrl
+            // guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: "profiles") else { return }
+            guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: .profile) else { return }
+            editedData["profileImageUrl"] = imageUrl
         }
         
         if !editedData.isEmpty, let userId = user?.id {
