@@ -19,11 +19,15 @@ class NewPostViewModel : ObservableObject {
     @Published var uiImage: UIImage?
     
     func convertImage(item: PhotosPickerItem?) async {
-        guard let item = item else { return }
-        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
-        guard let uiImage = UIImage(data: data) else { return }
-        self.postImage = Image(uiImage: uiImage)
-        self.uiImage = uiImage
+//        guard let item = item else { return }
+//        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
+//        guard let uiImage = UIImage(data: data) else { return }
+//        self.postImage = Image(uiImage: uiImage)
+//        self.uiImage = uiImage
+        
+        guard let imageSelection = await ImageManager.convertImage(item: item) else { return }
+        self.postImage = imageSelection.image
+        self.uiImage = imageSelection.uiImage
     }
     
     func uploadPost() async {

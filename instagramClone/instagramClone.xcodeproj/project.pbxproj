@@ -13,12 +13,13 @@
 		1909446D2C561EB600DAADB0 /* CompleteSingupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */; };
 		191524DF2C706D4F0087879F /* ProfileEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191524DE2C706D4F0087879F /* ProfileEditingView.swift */; };
 		1917125B2C4B27EA00EBCB02 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1917125A2C4B27EA00EBCB02 /* Post.swift */; };
+		191EF7212CB10AFB005517CD /* ImageManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EF7202CB10AFB005517CD /* ImageManger.swift */; };
+		191EF7242CB115C1005517CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 191EF7232CB115C1005517CD /* GoogleService-Info.plist */; };
 		192477D22C60B7A40010A0A4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192477D12C60B7A40010A0A4 /* LoginViewModel.swift */; };
 		1929D5ED2C48F674002C7231 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5EC2C48F674002C7231 /* FirebaseAuth */; };
 		1929D5EF2C48F674002C7231 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5EE2C48F674002C7231 /* FirebaseFirestore */; };
 		1929D5F12C48F674002C7231 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5F02C48F674002C7231 /* FirebaseFirestoreSwift */; };
 		1929D5F32C48F674002C7231 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1929D5F22C48F674002C7231 /* FirebaseStorage */; };
-		192F27F82C4A23F9003A4B33 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */; };
 		192F27FB2C4A250B003A4B33 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */; };
 		1939F1B82C59DCE00036739C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939F1B72C59DCE00036739C /* SignupViewModel.swift */; };
 		193BC2F92C51E4D200BC8F8B /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */; };
@@ -68,8 +69,10 @@
 		1909446C2C561EB600DAADB0 /* CompleteSingupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSingupView.swift; sourceTree = "<group>"; };
 		191524DE2C706D4F0087879F /* ProfileEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditingView.swift; sourceTree = "<group>"; };
 		1917125A2C4B27EA00EBCB02 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		191EF7202CB10AFB005517CD /* ImageManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManger.swift; sourceTree = "<group>"; };
+		191EF7222CB10C2F005517CD /* 10-2Tuple.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "10-2Tuple.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		191EF7232CB115C1005517CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		192477D12C60B7A40010A0A4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 		1939F1B72C59DCE00036739C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
@@ -212,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				19B3137B2C5B3BF500E1C96C /* AuthManager.swift */,
+				191EF7202CB10AFB005517CD /* ImageManger.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -219,6 +223,7 @@
 		19D409962C3E592500A4B6E7 = {
 			isa = PBXGroup;
 			children = (
+				191EF7222CB10C2F005517CD /* 10-2Tuple.playground */,
 				1972151F2C78662F00A51F81 /* Dictionary.playground */,
 				19B313792C5B387E00E1C96C /* static, singleton.playground */,
 				194211042C4335270032300F /* Optional.playground */,
@@ -253,8 +258,8 @@
 				192F27F92C4A24D5003A4B33 /* NewPost */,
 				19E39EE42C6F342F0020CEFC /* Profile */,
 				19D409A62C3E592600A4B6E7 /* Assets.xcassets */,
+				191EF7232CB115C1005517CD /* GoogleService-Info.plist */,
 				197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */,
-				192F27F72C4A23F9003A4B33 /* GoogleService-Info.plist */,
 				19D409A82C3E592600A4B6E7 /* Preview Content */,
 			);
 			path = instagramClone;
@@ -410,8 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D409AA2C3E592600A4B6E7 /* Preview Assets.xcassets in Resources */,
-				192F27F82C4A23F9003A4B33 /* GoogleService-Info.plist in Resources */,
 				19D409A72C3E592600A4B6E7 /* Assets.xcassets in Resources */,
+				191EF7242CB115C1005517CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +465,7 @@
 				192F27FB2C4A250B003A4B33 /* NewPostViewModel.swift in Sources */,
 				19E39EE32C6F342A0020CEFC /* ProfileView.swift in Sources */,
 				192477D22C60B7A40010A0A4 /* LoginViewModel.swift in Sources */,
+				191EF7212CB10AFB005517CD /* ImageManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import PhotosUI
 import FirebaseStorage
 
 
-class ProfileViewModel : ObservableObject{
+class ProfileViewModel : ObservableObject {
     @Published var user: User?
     
     @Published var name: String
@@ -25,7 +25,7 @@ class ProfileViewModel : ObservableObject{
     @Published var posts: [Post] = []
     
     init() {
-//        self.user = AuthManager.shared.currentUser
+        //        self.user = AuthManager.shared.currentUser
         let tempUser = AuthManager.shared.currentUser
         self.user = tempUser
         
@@ -35,13 +35,16 @@ class ProfileViewModel : ObservableObject{
     }
     
     func convertImage(item: PhotosPickerItem?) async {
-        guard let item = item else { return }
-        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
-        guard let uiImage = UIImage(data: data) else { return }
-        self.profileImage = Image(uiImage: uiImage)
-        self.uiImage = uiImage
+        //        guard let item = item else { return }
+        //        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
+        //        guard let uiImage = UIImage(data: data) else { return }
+        //        self.profileImage = Image(uiImage: uiImage)
+        //        self.uiImage = uiImage
+        guard let imageSelection = await ImageManager.convertImage(item: item) else { return }
+        self.profileImage = imageSelection.image
+        self.uiImage = imageSelection.uiImage
     }
-
+    
     func updateUser() async {
         do {
             try await updateUserRemote()
@@ -76,8 +79,10 @@ class ProfileViewModel : ObservableObject{
             editedData["bie"] = bie
         }
         if let uiImage = self.uiImage {
-            let imageUrl = await uploadImage(uiImage: uiImage)
-            editedData["profileImageUrl"] = imageUrl
+//            let imageUrl = await uploadImage(uiImage: uiImage)
+//            guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: "profiles") else { return }
+//            guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: .profile) else { return }
+//            editedData["profileImageUrl"] = imageUrl
         }
         
         if !editedData.isEmpty, let userId = user?.id {
@@ -87,22 +92,22 @@ class ProfileViewModel : ObservableObject{
         
     }
     
-    func uploadImage(uiImage: UIImage) async -> String? {
-        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
-        let fileName = UUID().uuidString
-        print("fileName:", fileName)
-        let reference = Storage.storage().reference(withPath: "/profile/\(fileName)")
-        
-        do {
-            let metaData = try await reference.putDataAsync(imageData)
-            print("metaData:", metaData)
-            let url = try await reference.downloadURL()
-            return url.absoluteString
-        } catch {
-            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
-            return nil
-        }
-    }
+    //    func uploadImage(uiImage: UIImage) async -> String? {
+    //        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
+    //        let fileName = UUID().uuidString
+    //        print("fileName:", fileName)
+    //        let reference = Storage.storage().reference(withPath: "/profile/\(fileName)")
+    //
+    //        do {
+    //            let metaData = try await reference.putDataAsync(imageData)
+    //            print("metaData:", metaData)
+    //            let url = try await reference.downloadURL()
+    //            return url.absoluteString
+    //        } catch {
+    //            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+    //            return nil
+    //        }
+    //    }
     
     func loadUserPosts() async {
         do {
@@ -123,4 +128,3 @@ class ProfileViewModel : ObservableObject{
         }
     }
 }
-
