@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeedView: View {
+    @StateObject var viewModel = FeedViewModel()
     var body: some View {
         ScrollView {
             VStack {
@@ -27,13 +28,18 @@ struct FeedView: View {
                 }
                 .padding(.horizontal)
                 
-                FeedCellView()
-                FeedCellView()
-                FeedCellView()
-                FeedCellView()
+                ForEach(viewModel.posts) { post in
+                    FeedCellView(post: post)
+                }
                 
                 Spacer()
             }
+        }
+        .refreshable {
+            await viewModel.loadAllPosts()
+        }
+        .task {
+            await viewModel.loadAllPosts()
         }
     }
 }

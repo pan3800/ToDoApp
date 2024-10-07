@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedCellView: View {
+    @State var viewModel: FeedCellViewModel
+    
+    init(post: Post) {
+        self.viewModel = FeedCellViewModel(post: post)
+    }
+    
     var body: some View {
         VStack {
-            Image("image_dragon2")
+            KFImage(URL(string: viewModel.post.imageUrl))
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity)
@@ -48,7 +55,7 @@ struct FeedCellView: View {
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-            Text("general.cat" + " " + "상세 글 정보")
+            Text("general.cat" + " " + viewModel.post.caption)
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
@@ -68,8 +75,8 @@ struct FeedCellView: View {
     }
 }
 
-struct FeedCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedCellView()
-    }
-}
+//struct FeedCellView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FeedCellView(post: Post(id: "iMP2FX2V6cDGwhMAodRw", userId: "GzaQsA3lFlaPyP9TJi9poTnEgG42", caption: "Panda", like: 0, imageUrl: "https://firebasestorage.googleapis.com:443/v0/b/instagramclone-a5529.appspot.com/o/images%2F4826A681-3158-43E0-AFD2-7D40E9CB2A39?alt=media&token=614cee3b-2b12-462f-bab5-1836fe8620b0", date: Date()))
+//    }
+//}
