@@ -35,9 +35,10 @@ class AuthManager : ObservableObject{
             guard let userId = currentAuthUser?.uid else { return }
             await uploadUserData(userId: userId, email: email, username: username, name: name)
         } catch {
-            print("DEBUG: Faild to create user with error \(error.localizedDescription)")
+            print("DEBUG: Failed to create user with error \(error.localizedDescription)")
         }
     }
+    
     func uploadUserData(userId: String, email: String, username: String, name: String) async {
         let user = User(id: userId, email: email, username: username, name: name)
         self.currentUser = user
@@ -45,7 +46,7 @@ class AuthManager : ObservableObject{
             let encodedUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
         } catch {
-            print("DEBUG: Faild to upload user data with error \(error.localizedDescription)")
+            print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
         }
     }
     
@@ -55,7 +56,7 @@ class AuthManager : ObservableObject{
             currentAuthUser = result.user
             await loadCurrentUserData()
         } catch {
-            print("DEBUG: Faild to log in with error \(error.localizedDescription)")
+            print("DEBUG: Failed to log in with error \(error.localizedDescription)")
         }
     }
     
@@ -64,27 +65,28 @@ class AuthManager : ObservableObject{
         do {
             self.currentUser = try await Firestore.firestore().collection("users").document(userId).getDocument(as: User.self)
         } catch {
-            print("DEBUG: Faild to load user data with error \(error.localizedDescription)")
+            print("DEBUG: Failed to load user data with error \(error.localizedDescription)")
         }
     }
     
     func loadUserData(userId: String) async -> User? {
-        // guard let userId = self.currentAuthUser?.uid else { return }
         do {
             let user = try await Firestore.firestore().collection("users").document(userId).getDocument(as: User.self)
             return user
         } catch {
-            print("DEBUG: Faild to load user data with error \(error.localizedDescription)")
+            print("DEBUG: Failed to load user data with error \(error.localizedDescription)")
             return nil
         }
     }
+    
     
     func signout() {
         do {
             try Auth.auth().signOut()
             currentAuthUser = nil
+            currentUser = nil
         } catch {
-            print("DEBUG: Faild to sign out with error \(error.localizedDescription)")
+            print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
     }
 }
