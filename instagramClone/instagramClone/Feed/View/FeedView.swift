@@ -28,9 +28,12 @@ struct FeedView: View {
                 }
                 .padding(.horizontal)
                 
-                ForEach(viewModel.posts) { post in
-                    FeedCellView(post: post)
+                LazyVStack {
+                    ForEach(viewModel.posts) { post in
+                        FeedCellView(post: post)
+                    }
                 }
+           
                 
                 Spacer()
             }
