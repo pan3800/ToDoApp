@@ -65,7 +65,7 @@ struct FeedCellView: View {
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-            Text("3일전")
+            Text("\(viewModel.post.date.relativeTimeString())")
                 .foregroundStyle(.gray)
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
