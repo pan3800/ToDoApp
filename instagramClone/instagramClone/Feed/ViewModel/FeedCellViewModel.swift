@@ -12,5 +12,14 @@ class FeedCellViewModel: ObservableObject {
     
     init(post: Post) {
         self.post = post
+        Task {
+            await loadUserData()
+        }
+    }
+    
+    func loadUserData() async {
+        let userId = post.userId
+        guard let user = await AuthManager.shared.loadUserData(userId: userId) else { return }
+        post.user = user
     }
 }

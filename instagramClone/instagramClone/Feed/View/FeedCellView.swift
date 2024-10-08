@@ -24,7 +24,8 @@ struct FeedCellView: View {
                 .frame(maxWidth: .infinity)
                 .overlay(alignment: .top) {
                     HStack {
-                        Image("image_lion4")
+                        // Image("image_lion4")
+                        KFImage(URL(string: viewModel.post.user?.profileImageUrl ?? ""))
                             .resizable()
                             .frame(width: 35, height: 35)
                             .clipShape(Circle())
@@ -32,7 +33,7 @@ struct FeedCellView: View {
                                 Circle()
                                     .stroke(Color(red: 191/255, green: 11/255, blue: 180/255), lineWidth: 2)
                             }
-                        Text("general.cat")
+                        Text("\(viewModel.post.user?.username ?? "") ")
                             .foregroundStyle(.white)
                             .bold()
                         Spacer()
@@ -52,11 +53,11 @@ struct FeedCellView: View {
             }
             .imageScale(.large)
             .padding(.horizontal)
-            Text("좋아요 25,239개")
+            Text("좋아요 \(viewModel.post.like)개")
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-            Text("general.cat" + " " + viewModel.post.caption)
+            Text("\(viewModel.post.user?.username ?? "")" + " " + viewModel.post.caption)
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
