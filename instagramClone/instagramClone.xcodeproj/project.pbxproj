@@ -82,6 +82,7 @@
 		191F6AE42CB3BF8600962828 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		191F6AE82CB3C3B300962828 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
 		192477D12C60B7A40010A0A4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		192A122D2CB7B98100B8C0E4 /* 12-3computedProperty.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "12-3computedProperty.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		192F27FA2C4A250B003A4B33 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
 		1939F1B72C59DCE00036739C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
@@ -261,6 +262,7 @@
 		19D409962C3E592500A4B6E7 = {
 			isa = PBXGroup;
 			children = (
+				192A122D2CB7B98100B8C0E4 /* 12-3computedProperty.playground */,
 				19E80D0D2CB4F68100F78ADB /* 11-5timeString.playground */,
 				191EF7222CB10C2F005517CD /* 10-2Tuple.playground */,
 				1972151F2C78662F00A51F81 /* Dictionary.playground */,

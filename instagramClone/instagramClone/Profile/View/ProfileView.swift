@@ -84,33 +84,45 @@ struct ProfileView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     
-                    
-                    NavigationLink {
-                        ProfileEditingView(viewModel: viewModel)
-                    } label: {
-                        Text("프로필 편집")
-                            .bold()
-                            .foregroundStyle(.black)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 35)
-                            .background(Color.gray.opacity(0.2))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .padding(.horizontal, 10)
-                            .padding(.top, 10)
+                    if viewModel.user?.isCurrentUser == true {
+                        NavigationLink {
+                            ProfileEditingView(viewModel: viewModel)
+                        } label: {
+                            Text("프로필 편집")
+                                .bold()
+                                .foregroundStyle(.black)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 35)
+                                .background(Color.gray.opacity(0.2))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.horizontal, 10)
+                                .padding(.top, 10)
+                        }
+                    } else {
+                        Button {
+                            print("following")
+                        } label: {
+                            Text("팔로우")
+                                .bold()
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 35)
+                                .background(.blue)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.horizontal, 10)
+                                .padding(.top, 10)
+                        }
                     }
+              
                     Divider()
                         .padding()
                     
                     LazyVGrid(columns: columns ,spacing: 2) {
-//                        ForEach(0..<10) { _ in
-//
-//                        }
                         ForEach(viewModel.posts) { post in
                             
                             let url = URL(string: post.imageUrl)
                             KFImage(url)
                                 .resizable()
-                                //.scaledToFill()
                                 .aspectRatio(1, contentMode: .fill)
                         }
                     }
