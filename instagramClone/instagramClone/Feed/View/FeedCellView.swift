@@ -16,26 +16,32 @@ struct FeedCellView: View {
     }
     
     var body: some View {
-        let _ = print("image loading complate")
         VStack {
+            
             KFImage(URL(string: viewModel.post.imageUrl))
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity)
                 .overlay(alignment: .top) {
                     HStack {
-                        // Image("image_lion4")
-                        KFImage(URL(string: viewModel.post.user?.profileImageUrl ?? ""))
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .clipShape(Circle())
-                            .overlay() {
-                                Circle()
-                                    .stroke(Color(red: 191/255, green: 11/255, blue: 180/255), lineWidth: 2)
+                        NavigationLink {
+                            if let user = viewModel.post.user {
+                                ProfileView(viewModel: ProfileViewModel(user: user))
                             }
-                        Text("\(viewModel.post.user?.username ?? "") ")
-                            .foregroundStyle(.white)
-                            .bold()
+                        } label: {
+                            KFImage(URL(string: viewModel.post.user?.profileImageUrl ?? ""))
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                                .clipShape(Circle())
+                                .overlay() {
+                                    Circle()
+                                        .stroke(Color(red: 191/255, green: 11/255, blue: 180/255), lineWidth: 2)
+                                }
+                            Text("\(viewModel.post.user?.username ?? "") ")
+                                .foregroundStyle(.white)
+                                .bold()
+                        }
+
                         Spacer()
                         
                         Image(systemName: "line.3.horizontal")

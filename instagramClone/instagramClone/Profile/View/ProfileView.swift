@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+    @Environment(\.dismiss) var dismiss
     
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 2),
@@ -120,6 +121,17 @@ struct ProfileView: View {
                     Spacer()
                     
                     
+                }
+            }
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "arrow.backward")
+                        .tint(.black)
                 }
             }
         }

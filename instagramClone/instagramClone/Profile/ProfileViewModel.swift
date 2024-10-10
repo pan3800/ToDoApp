@@ -34,6 +34,13 @@ class ProfileViewModel : ObservableObject {
         self.bie = tempUser?.bie ?? ""
     }
     
+    init(user: User) {
+        self.user = user
+        self.name = user.name
+        self.username = user.username
+        self.bie = user.bie ?? ""
+    }
+    
     func convertImage(item: PhotosPickerItem?) async {
         //        guard let item = item else { return }
         //        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
