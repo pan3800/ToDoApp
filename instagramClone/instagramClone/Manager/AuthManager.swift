@@ -91,4 +91,71 @@ class AuthManager : ObservableObject{
     }
 }
 
+extension AuthManager {
+    func follow(userId: String) async {
+        guard let currentUserId = currentUser?.id else { return }
+        do {
+            async let _ = try await Firestore.firestore()
+                .collection("following")
+                .document(currentUserId)
+                .collection("user-following")
+                .document(userId)
+                .setData([:])
+            
+            async let _ = try await Firestore.firestore()
+                .collection("follower")
+                .document(userId)
+                .collection("user-follower")
+                .document(currentUserId)
+                .setData([:])
+            
+            
+        } catch {
+            print("DEBUG: Failed to save follow data with error \(error.localizedDescription)")
+        }
+    }
+    
+    func unfollow(userId: String) async {
+        guard let currentUserId = currentUser?.id else { return }
+        do {
+            async let _ = try await Firestore.firestore()
+                .collection("following")
+                .document(currentUserId)
+                .collection("user-following")
+                .document(userId)
+                .delete()
+            
+            async let _ = try await Firestore.firestore()
+                .collection("follower")
+                .document(userId)
+                .collection("user-follower")
+                .document(currentUserId)
+                .delete()
+            
+            
+        } catch {
+            print("DEBUG: Failed to delete follow data with error \(error.localizedDescription)")
+        }
+    }
+    
+    func checkFollow(userId: String) async -> Bool {
+        guard let currentUserId = currentUser?.id else { return false}
+
+        do {
+            let isFollowing = try await Firestore.firestore()
+                .collection("following")
+                .document(currentUserId)
+                .collection("user-following")
+                .document(userId)
+                .getDocument()
+                .exists
+
+            return isFollowing
+        } catch {
+            print("DEBUG: Failed to delete follow data with error \(error.localizedDescription)")
+            return false 
+        }
+    }
+}
+
 
