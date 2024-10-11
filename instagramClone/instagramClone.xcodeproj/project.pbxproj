@@ -45,6 +45,8 @@
 		19D409C02C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */; };
 		19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */; };
 		19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */; };
+		19DEB74A2CB8F1280060AB56 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DEB7492CB8F1280060AB56 /* SearchView.swift */; };
+		19DEB74C2CB8F1CE0060AB56 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DEB74B2CB8F1CE0060AB56 /* SearchViewModel.swift */; };
 		19E2461D2C7EDD7B002DE4EA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 19E2461C2C7EDD7B002DE4EA /* Kingfisher */; };
 		19E39EE32C6F342A0020CEFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39EE22C6F342A0020CEFC /* ProfileView.swift */; };
 		19E80D102CB4FFC900F78ADB /* Date+relativeTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E80D0F2CB4FFC900F78ADB /* Date+relativeTimeString.swift */; };
@@ -111,6 +113,8 @@
 		19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19D409CC2C3E5BB500A4B6E7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		19D409CE2C3E5EAA00A4B6E7 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		19DEB7492CB8F1280060AB56 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		19DEB74B2CB8F1CE0060AB56 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		19E39EE22C6F342A0020CEFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		19E80D0D2CB4F68100F78ADB /* 11-5timeString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "11-5timeString.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		19E80D0F2CB4FFC900F78ADB /* Date+relativeTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+relativeTimeString.swift"; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			children = (
 				191F6AE62CB3BF9800962828 /* View */,
 				191F6AE72CB3BFA600962828 /* ViewModel */,
+				19DEB7482CB8F0FC0060AB56 /* Search */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -331,6 +336,15 @@
 				19D409BF2C3E592600A4B6E7 /* instagramCloneUITestsLaunchTests.swift */,
 			);
 			path = instagramCloneUITests;
+			sourceTree = "<group>";
+		};
+		19DEB7482CB8F0FC0060AB56 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				19DEB7492CB8F1280060AB56 /* SearchView.swift */,
+				19DEB74B2CB8F1CE0060AB56 /* SearchViewModel.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		19E39EE42C6F342F0020CEFC /* Profile */ = {
@@ -507,8 +521,10 @@
 				191524DF2C706D4F0087879F /* ProfileEditingView.swift in Sources */,
 				1909446D2C561EB600DAADB0 /* CompleteSingupView.swift in Sources */,
 				191F6AE52CB3BF8600962828 /* FeedViewModel.swift in Sources */,
+				19DEB74A2CB8F1280060AB56 /* SearchView.swift in Sources */,
 				19D409CF2C3E5EAA00A4B6E7 /* NewPostView.swift in Sources */,
 				191F6AE92CB3C3B300962828 /* FeedCellViewModel.swift in Sources */,
+				19DEB74C2CB8F1CE0060AB56 /* SearchViewModel.swift in Sources */,
 				191F6AE32CB3B69500962828 /* FeedCellView.swift in Sources */,
 				193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */,
 				19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */,

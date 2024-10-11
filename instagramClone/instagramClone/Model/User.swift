@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-struct User: Codable {
+struct User: Codable, Identifiable {
     let id: String
     let email: String
     var username: String

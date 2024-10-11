@@ -18,7 +18,7 @@ struct MainTabView: View {
                     Image(systemName: "house")
                 }
                 .tag(0)
-            Text("Search")
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }

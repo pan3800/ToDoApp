@@ -79,6 +79,19 @@ class AuthManager : ObservableObject{
         }
     }
     
+    func loadAllUserData() async -> [User]? {
+        do {
+            let documents = try await Firestore.firestore().collection("users").getDocuments().documents
+            let users = try documents.compactMap { document in
+                return try document.data(as: User.self)
+            }
+            return users
+        } catch {
+            print("DEBUG: Failed to load all user data with error \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
     
     func signout() {
         do {
