@@ -92,8 +92,10 @@ class AuthManager : ObservableObject{
 }
 
 extension AuthManager {
-    func follow(userId: String) async {
+    func follow(userId: String?) async {
         guard let currentUserId = currentUser?.id else { return }
+        guard let userId = userId else { return }
+        
         do {
             async let _ = try await Firestore.firestore()
                 .collection("following")
@@ -115,8 +117,10 @@ extension AuthManager {
         }
     }
     
-    func unfollow(userId: String) async {
+    func unfollow(userId: String?) async {
         guard let currentUserId = currentUser?.id else { return }
+        guard let userId = userId else { return }
+
         do {
             async let _ = try await Firestore.firestore()
                 .collection("following")
@@ -138,8 +142,9 @@ extension AuthManager {
         }
     }
     
-    func checkFollow(userId: String) async -> Bool {
+    func checkFollow(userId: String?) async -> Bool {
         guard let currentUserId = currentUser?.id else { return false}
+        guard let userId = userId else { return false }
 
         do {
             let isFollowing = try await Firestore.firestore()

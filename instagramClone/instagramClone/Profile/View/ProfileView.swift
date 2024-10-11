@@ -99,15 +99,20 @@ struct ProfileView: View {
                                 .padding(.top, 10)
                         }
                     } else {
+                        let isFollowing = viewModel.user?.isFollowing ?? false
                         Button {
-                            print("following")
+                            if isFollowing {
+                                viewModel.unfollow()
+                            } else {
+                                viewModel.follow()
+                            }
                         } label: {
-                            Text("팔로우")
+                            Text(isFollowing ? "팔로잉" : "팔로우")
                                 .bold()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(isFollowing ? .black : .white)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 35)
-                                .background(.blue)
+                                .background(isFollowing ? .gray.opacity(0.4) : .blue)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                 .padding(.horizontal, 10)
                                 .padding(.top, 10)

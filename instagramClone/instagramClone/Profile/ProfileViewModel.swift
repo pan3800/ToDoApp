@@ -25,10 +25,8 @@ class ProfileViewModel : ObservableObject {
     @Published var posts: [Post] = []
     
     init() {
-        //        self.user = AuthManager.shared.currentUser
         let tempUser = AuthManager.shared.currentUser
         self.user = tempUser
-        
         self.name = tempUser?.name ?? ""
         self.username = tempUser?.username ?? ""
         self.bie = tempUser?.bie ?? ""
@@ -39,14 +37,11 @@ class ProfileViewModel : ObservableObject {
         self.name = user.name
         self.username = user.username
         self.bie = user.bie ?? ""
+        
+        checkFollow()
     }
     
     func convertImage(item: PhotosPickerItem?) async {
-        //        guard let item = item else { return }
-        //        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
-        //        guard let uiImage = UIImage(data: data) else { return }
-        //        self.profileImage = Image(uiImage: uiImage)
-        //        self.uiImage = uiImage
         guard let imageSelection = await ImageManager.convertImage(item: item) else { return }
         self.profileImage = imageSelection.image
         self.uiImage = imageSelection.uiImage
@@ -86,7 +81,6 @@ class ProfileViewModel : ObservableObject {
             editedData["bie"] = bie
         }
         if let uiImage = self.uiImage {
-            // guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: "profiles") else { return }
             guard let imageUrl = await ImageManager.uploadImage(uiImage: uiImage, path: .profile) else { return }
             editedData["profileImageUrl"] = imageUrl
         }
@@ -97,23 +91,6 @@ class ProfileViewModel : ObservableObject {
         
         
     }
-    
-    //    func uploadImage(uiImage: UIImage) async -> String? {
-    //        guard let imageData = uiImage.jpegData(compressionQuality: 0.5) else { return nil }
-    //        let fileName = UUID().uuidString
-    //        print("fileName:", fileName)
-    //        let reference = Storage.storage().reference(withPath: "/profile/\(fileName)")
-    //
-    //        do {
-    //            let metaData = try await reference.putDataAsync(imageData)
-    //            print("metaData:", metaData)
-    //            let url = try await reference.downloadURL()
-    //            return url.absoluteString
-    //        } catch {
-    //            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
-    //            return nil
-    //        }
-    //    }
     
     func loadUserPosts() async {
         do {
@@ -131,6 +108,29 @@ class ProfileViewModel : ObservableObject {
             
         } catch {
             print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
+        }
+    }
+}
+
+
+extension ProfileViewModel {
+    func follow() {
+        Task {
+            await AuthManager.shared.follow(userId: user?.id)
+            user?.isFollowing = true
+        }
+    }
+    
+    func unfollow() {
+        Task {
+            await AuthManager.shared.unfollow(userId: user?.id)
+            user?.isFollowing = false
+        }
+    }
+    
+    func checkFollow() {
+        Task {
+            self.user?.isFollowing =  await AuthManager.shared.checkFollow(userId: user?.id)
         }
     }
 }
