@@ -10,33 +10,48 @@ import Kingfisher
 
 struct SearchView: View {
     @StateObject var viewModel = SearchViewModel()
+    @State var searchText = ""
     
-    var body: some View {
-        
-        List {
-            ForEach(viewModel.users) { user in
-                HStack {
-                    if let imageUrl = user.profileImageUrl {
-                        KFImage(URL(string: imageUrl))
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 53, height: 53)
-                            .clipShape(Circle())
-                    } else {
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .frame(width: 53, height: 53)
-                            .opacity(0.5)
-                    }
-                    VStack(alignment: .leading) {
-                        Text(user.username)
-                        Text(user.bie ?? "")
-                            .foregroundStyle(.gray)
-                    }
-                }
+    var filteredUsers: [User] {
+        if searchText.isEmpty {
+            return viewModel.users
+        } else {
+            return viewModel.users.filter { user in
+                return user.username.lowercased().contains(searchText.lowercased())
             }
         }
-        .listStyle(.plain)
+    }
+    
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(filteredUsers) { user in
+                    HStack {
+                        if let imageUrl = user.profileImageUrl {
+                            KFImage(URL(string: imageUrl))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 53, height: 53)
+                                .clipShape(Circle())
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 53, height: 53)
+                                .opacity(0.5)
+                        }
+                        VStack(alignment: .leading) {
+                            Text(user.username)
+                            Text(user.bie ?? "")
+                                .foregroundStyle(.gray)
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                    
+                }
+            }
+            .listStyle(.plain)
+            .searchable(text: $searchText, prompt: "검색")
+        }
     }
 }
 
