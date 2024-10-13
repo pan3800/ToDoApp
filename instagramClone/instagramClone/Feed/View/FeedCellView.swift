@@ -10,6 +10,7 @@ import Kingfisher
 
 struct FeedCellView: View {
     @State var viewModel: FeedCellViewModel
+    @State var isCommentShowing = false
     
     init(post: Post) {
         self.viewModel = FeedCellViewModel(post: post)
@@ -17,7 +18,6 @@ struct FeedCellView: View {
     
     var body: some View {
         VStack {
-            
             KFImage(URL(string: viewModel.post.imageUrl))
                 .resizable()
                 .scaledToFit()
@@ -51,8 +51,22 @@ struct FeedCellView: View {
                     .padding(5)
                 }
             HStack {
-                Image(systemName: "heart")
-                Image(systemName: "bubble.right")
+                let isLike = viewModel.post.isLike ?? false
+                Button {
+                    Task {
+                        isLike ? await viewModel.unlike() : await viewModel.like()
+                    }
+                } label: {
+                    Image(systemName: isLike ? "heart.fill" : "heart")
+                        .foregroundStyle(isLike ? .red : .primary)
+                }
+
+                Button {
+                    isCommentShowing = true
+                } label: {
+                    Image(systemName: "bubble.right")
+                }
+                .tint(.black)
                 Image(systemName: "paperplane")
                 Spacer()
                 Image(systemName: "bookmark")
@@ -67,11 +81,17 @@ struct FeedCellView: View {
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-            Text("댓글 25개 더보기")
-                .foregroundStyle(.gray)
-                .font(.footnote)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal)
+            
+            Button {
+                isCommentShowing = true
+            } label: {
+                Text("댓글 25개 더보기")
+                    .foregroundStyle(.gray)
+                    .font(.footnote)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+            }
+    
             Text("\(viewModel.post.date.relativeTimeString())")
                 .foregroundStyle(.gray)
                 .font(.footnote)
@@ -80,6 +100,10 @@ struct FeedCellView: View {
             
         }
         .padding(.bottom)
+        .sheet(isPresented: $isCommentShowing) {
+            CommentView()
+                .presentationDragIndicator(.visible)
+        }
     }
 }
 

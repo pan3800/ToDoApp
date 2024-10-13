@@ -46,3 +46,46 @@ class PostManager {
         }
     }
 }
+
+extension PostManager {
+    static func like(post: Post) async {
+        guard let userId = AuthManager.shared.currentUser?.id else { return }
+        
+        let postsCollection = Firestore.firestore().collection("posts")
+        let usersCollection = Firestore.firestore().collection("users")
+        
+        async let _ = usersCollection.document(userId).collection("user-like").document(post.id).setData([:])
+        async let _ = postsCollection.document(post.id).collection("post-like").document(userId).setData([:])
+        async let _ = postsCollection.document(post.id).updateData(["like": post.like + 1])
+        
+    }
+    
+    static func unlike(post: Post) async {
+        guard let userId = AuthManager.shared.currentUser?.id else { return }
+        
+        let postsCollection = Firestore.firestore().collection("posts")
+        let usersCollection = Firestore.firestore().collection("users")
+        
+        async let _ = usersCollection.document(userId).collection("user-like").document(post.id).delete()
+        async let _ = postsCollection.document(post.id).collection("post-like").document(userId).delete()
+        async let _ = postsCollection.document(post.id).updateData(["like": post.like - 1])
+    }
+    
+    static func checkLike(post: Post) async -> Bool {
+        guard let userId = AuthManager.shared.currentUser?.id else { return false }
+        do {
+            let isLike = try await Firestore.firestore()
+                .collection("users")
+                .document(userId)
+                .collection("user-like")
+                .document(post.id)
+                .getDocument()
+                .exists
+            return isLike
+            
+        } catch {
+            print("DEBUG: Failed to check like with error \(error.localizedDescription)")
+            return false
+        }
+    }
+}
