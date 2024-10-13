@@ -50,6 +50,7 @@
 		19E2461D2C7EDD7B002DE4EA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 19E2461C2C7EDD7B002DE4EA /* Kingfisher */; };
 		19E39EE32C6F342A0020CEFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E39EE22C6F342A0020CEFC /* ProfileView.swift */; };
 		19E80D102CB4FFC900F78ADB /* Date+relativeTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E80D0F2CB4FFC900F78ADB /* Date+relativeTimeString.swift */; };
+		19FB72632CBBA2100034F2F1 /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB72622CBBA2100034F2F1 /* PostManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		19E39EE22C6F342A0020CEFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		19E80D0D2CB4F68100F78ADB /* 11-5timeString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "11-5timeString.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		19E80D0F2CB4FFC900F78ADB /* Date+relativeTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+relativeTimeString.swift"; sourceTree = "<group>"; };
+		19FB72622CBBA2100034F2F1 /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 			children = (
 				19B3137B2C5B3BF500E1C96C /* AuthManager.swift */,
 				191EF7202CB10AFB005517CD /* ImageManger.swift */,
+				19FB72622CBBA2100034F2F1 /* PostManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				190944692C561C7800DAADB0 /* EnterNameView.swift in Sources */,
 				197215242C7878A600A51F81 /* ProfileViewModel.swift in Sources */,
 				1909446B2C561D9B00DAADB0 /* EnterUsernameView.swift in Sources */,
+				19FB72632CBBA2100034F2F1 /* PostManager.swift in Sources */,
 				19606B372C5748BA00BFD462 /* SignupBackgroundView.swift in Sources */,
 				1993E6232C5DD9DF002F8AB8 /* User.swift in Sources */,
 				191F6AE12CB3B4C200962828 /* FeedView.swift in Sources */,

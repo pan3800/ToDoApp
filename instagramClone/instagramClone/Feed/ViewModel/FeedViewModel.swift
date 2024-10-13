@@ -19,27 +19,19 @@ class FeedViewModel: ObservableObject {
     }
     
     func loadAllPosts() async {
-        do {
-            let documents = try await Firestore.firestore().collection("posts").order(by: "date", descending: true)
-                .getDocuments().documents
-            //방법1
-//            var posts: [Post] = []
-//            for document in documents {
-//                let post = try document.data(as: Post.self)
-//                posts.append(post)
-//            }
-//            self.posts = posts
-            //방법2
-//            self.posts = try documents.map({ document in
+        guard let posts = await PostManager.loadAllPosts() else { return }
+        self.posts = posts
+//        do {
+//            let documents = try await Firestore.firestore().collection("posts").order(by: "date", descending: true)
+//                .getDocuments().documents
+//
+//            //방법3
+//            self.posts = try documents.compactMap({ document in
+//                print("posts:", document)
 //                return try document.data(as: Post.self)
 //            })
-            //방법3
-            self.posts = try documents.compactMap({ document in
-                print("posts:", document)
-                return try document.data(as: Post.self)
-            })
-        } catch {
-            print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
-        }
+//        } catch {
+//            print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
+//        }
     }
 }

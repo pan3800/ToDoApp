@@ -93,22 +93,25 @@ class ProfileViewModel : ObservableObject {
     }
     
     func loadUserPosts() async {
-        do {
-            let documents = try await Firestore.firestore().collection("posts")
-                .order(by: "date", descending: true)
-                .whereField("userId", isEqualTo: user?.id ?? "").getDocuments().documents
-            
-            var posts: [Post] = []
-            for document in documents {
-                let post = try document.data(as: Post.self)
-                posts.append(post)
-            }
-            
-            self.posts = posts
-            
-        } catch {
-            print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
-        }
+        guard let userId = user?.id else { return }
+        guard let posts =  await PostManager.loadUserPosts(userId: userId) else { return }
+        self.posts = posts
+//        do {
+//            let documents = try await Firestore.firestore().collection("posts")
+//                .order(by: "date", descending: true)
+//                .whereField("userId", isEqualTo: user?.id ?? "").getDocuments().documents
+//
+//            var posts: [Post] = []
+//            for document in documents {
+//                let post = try document.data(as: Post.self)
+//                posts.append(post)
+//            }
+//
+//            self.posts = posts
+//
+//        } catch {
+//            print("DEBUG: Failed to load user posts with error \(error.localizedDescription)")
+//        }
     }
 }
 
