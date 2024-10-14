@@ -9,6 +9,12 @@ import SwiftUI
 
 struct CommentView: View {
     @State var commentText = ""
+    @State var viewModel: CommentViewModel
+    
+    init(post: Post) {
+        self.viewModel = CommentViewModel(post: post)
+    }
+    
     var body: some View {
         VStack {
             Text("댓글")
@@ -21,10 +27,10 @@ struct CommentView: View {
             
             ScrollView {
                 LazyVStack {
-                    Text("comment")
-                    Text("comment")
-                    Text("comment")
-                    Text("comment")
+                    ForEach(viewModel.comments) { comment in
+                        
+                        Text(comment.commentText)
+                    }
                 }
             }
             
@@ -37,7 +43,10 @@ struct CommentView: View {
                 
                 TextField("댓글 추가", text: $commentText, axis: .vertical)
                 Button {
-                    
+                    Task {
+                        await viewModel.uploadComment(commentText: commentText)
+                        commentText = ""
+                    }
                 } label: {
                     Text("보내기")
                 }
@@ -51,6 +60,6 @@ struct CommentView: View {
 
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView()
+        CommentView(post: Post.DUMMY_POST)
     }
 }

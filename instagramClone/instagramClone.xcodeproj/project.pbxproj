@@ -29,6 +29,9 @@
 		1939F1B82C59DCE00036739C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939F1B72C59DCE00036739C /* SignupViewModel.swift */; };
 		193BC2F92C51E4D200BC8F8B /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */; };
 		193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */; };
+		195424662CBCDDC1003602E0 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195424652CBCDDC1003602E0 /* Comment.swift */; };
+		195424682CBCDEB9003602E0 /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195424672CBCDEB9003602E0 /* CommentManager.swift */; };
+		1954246A2CBCE3B3003602E0 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195424692CBCE3B3003602E0 /* CommentViewModel.swift */; };
 		19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */; };
 		19606B372C5748BA00BFD462 /* SignupBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B362C5748BA00BFD462 /* SignupBackgroundView.swift */; };
 		19606B392C574F7400BFD462 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B382C574F7400BFD462 /* BlueButtonView.swift */; };
@@ -93,6 +96,9 @@
 		193BC2F82C51E4D200BC8F8B /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		193BC2FA2C51E59000BC8F8B /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
 		194211042C4335270032300F /* Optional.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Optional.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		195424652CBCDDC1003602E0 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		195424672CBCDEB9003602E0 /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
+		195424692CBCE3B3003602E0 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		195D3BE62C45045F004026C5 /* ErrorHanding.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorHanding.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTextFieldModifier.swift; sourceTree = "<group>"; };
 		19606B362C5748BA00BFD462 /* SignupBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBackgroundView.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 			children = (
 				1917125A2C4B27EA00EBCB02 /* Post.swift */,
 				1993E6222C5DD9DF002F8AB8 /* User.swift */,
+				195424652CBCDDC1003602E0 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				1928E4432CBBCE6600D0CF0A /* CommentView.swift */,
+				195424692CBCE3B3003602E0 /* CommentViewModel.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 				19B3137B2C5B3BF500E1C96C /* AuthManager.swift */,
 				191EF7202CB10AFB005517CD /* ImageManger.swift */,
 				19FB72622CBBA2100034F2F1 /* PostManager.swift */,
+				195424672CBCDEB9003602E0 /* CommentManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -529,7 +538,9 @@
 				197215242C7878A600A51F81 /* ProfileViewModel.swift in Sources */,
 				1909446B2C561D9B00DAADB0 /* EnterUsernameView.swift in Sources */,
 				19FB72632CBBA2100034F2F1 /* PostManager.swift in Sources */,
+				195424682CBCDEB9003602E0 /* CommentManager.swift in Sources */,
 				19606B372C5748BA00BFD462 /* SignupBackgroundView.swift in Sources */,
+				195424662CBCDDC1003602E0 /* Comment.swift in Sources */,
 				1993E6232C5DD9DF002F8AB8 /* User.swift in Sources */,
 				191F6AE12CB3B4C200962828 /* FeedView.swift in Sources */,
 				19D409CD2C3E5BB500A4B6E7 /* MainTabView.swift in Sources */,
@@ -542,6 +553,7 @@
 				191F6AE92CB3C3B300962828 /* FeedCellViewModel.swift in Sources */,
 				19DEB74C2CB8F1CE0060AB56 /* SearchViewModel.swift in Sources */,
 				191F6AE32CB3B69500962828 /* FeedCellView.swift in Sources */,
+				1954246A2CBCE3B3003602E0 /* CommentViewModel.swift in Sources */,
 				193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */,
 				19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */,
 				19606B392C574F7400BFD462 /* BlueButtonView.swift in Sources */,

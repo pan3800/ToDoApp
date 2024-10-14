@@ -101,7 +101,7 @@ struct FeedCellView: View {
         }
         .padding(.bottom)
         .sheet(isPresented: $isCommentShowing) {
-            CommentView()
+            CommentView(post: viewModel.post)
                 .presentationDragIndicator(.visible)
         }
     }

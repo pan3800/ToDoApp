@@ -20,3 +20,14 @@ struct Post : Codable ,Identifiable{
     
     var user: User?
 }
+
+extension Post {
+    static var DUMMY_POST: Post = Post(
+        id: UUID().uuidString,
+        userId: UUID().uuidString,
+        caption: "test caption",
+        like: 125,
+        imageUrl: "https://firebasestorage.googleapis.com:443/v0/b/instagramclone-5ef5f.appspot.com/o/images%2FB3F31025-7216-4E1A-8540-32D4A42D086B?alt=media&token=4178fa83-72e8-4560-a518-78e279dd86f5",
+        date: Date()
+    )
+}
