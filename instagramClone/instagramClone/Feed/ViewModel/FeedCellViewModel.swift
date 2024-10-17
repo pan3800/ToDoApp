@@ -9,12 +9,14 @@ import Foundation
 
 class FeedCellViewModel: ObservableObject {
     @Published var post: Post
+    @Published var commentCount = 0
     
     init(post: Post) {
         self.post = post
         Task {
             await loadUserData()
             await checkLike()
+            await loadCommentCount()
         }
     }
     
@@ -40,5 +42,12 @@ extension FeedCellViewModel {
     
     func checkLike() async {
         post.isLike = await PostManager.checkLike(post: post)
+    }
+}
+
+
+extension FeedCellViewModel {
+    func loadCommentCount() async {
+        self.commentCount = await CommentManager.loadCommentCount(postId: post.id)
     }
 }

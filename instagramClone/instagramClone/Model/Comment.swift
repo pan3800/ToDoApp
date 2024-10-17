@@ -19,3 +19,14 @@ struct Comment: Codable, Identifiable {
     
     let date: Date 
 }
+
+
+extension Comment {
+    static var DUMMY_COMMENT: Comment = Comment(
+        id: UUID().uuidString,
+        commentText: "test comment",
+        postId: UUID().uuidString,
+        postUserId: UUID().uuidString,
+        commentUserId: UUID().uuidString,
+        date: Date())
+}

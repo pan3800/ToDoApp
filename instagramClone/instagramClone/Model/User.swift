@@ -22,3 +22,11 @@ struct User: Codable, Identifiable {
         return id == currentUserId
     }
 }
+
+extension User {
+    static var DUMMY_USER: User = User(
+        id: UUID().uuidString,
+        email: "dummy@gmail.com",
+        username: "dummy",
+        name: "dummy")
+}

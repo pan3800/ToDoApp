@@ -85,7 +85,7 @@ struct FeedCellView: View {
             Button {
                 isCommentShowing = true
             } label: {
-                Text("댓글 25개 더보기")
+                Text("댓글 \(viewModel.commentCount)개 더보기")
                     .foregroundStyle(.gray)
                     .font(.footnote)
                     .frame(maxWidth: .infinity, alignment: .leading)

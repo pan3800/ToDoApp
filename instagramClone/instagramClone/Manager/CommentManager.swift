@@ -41,4 +41,20 @@ class CommentManager {
             return []
         }
     }
+    
+    static func loadCommentCount(postId: String) async -> Int {
+        do {
+            let documents = try await Firestore.firestore()
+                .collection("posts")
+                .document(postId)
+                .collection("post-comment")
+                .getDocuments()
+                .documents
+
+            return documents.count
+        } catch {
+            print("DEBUG: Faild to load comment count with error \(error.localizedDescription)")
+            return 0
+        }
+    }
 }

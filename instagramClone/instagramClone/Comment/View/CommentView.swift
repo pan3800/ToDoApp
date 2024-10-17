@@ -26,10 +26,12 @@ struct CommentView: View {
             Divider()
             
             ScrollView {
-                LazyVStack {
+                LazyVStack(alignment: .leading) {
                     ForEach(viewModel.comments) { comment in
+                        CommentCellView(comment: comment)
+                            .padding(.horizontal)
+                            .padding(.top)
                         
-                        Text(comment.commentText)
                     }
                 }
             }
