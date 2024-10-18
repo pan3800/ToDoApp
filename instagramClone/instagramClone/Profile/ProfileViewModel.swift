@@ -18,11 +18,22 @@ class ProfileViewModel : ObservableObject {
     @Published var username: String
     @Published var bie: String
     
+    @Published var posts: [Post] = []
+    
     @Published var selectedItem: PhotosPickerItem?
     @Published var profileImage: Image?
     @Published var uiImage: UIImage?
     
-    @Published var posts: [Post] = []
+    var postCount: Int? {
+        user?.userCountInfo?.postCount
+    }
+    var followingCount: Int? {
+        user?.userCountInfo?.followerCount
+    }
+    var followerCount: Int? {
+        user?.userCountInfo?.followerCount
+    }
+
     
     init() {
         let tempUser = AuthManager.shared.currentUser
@@ -30,6 +41,10 @@ class ProfileViewModel : ObservableObject {
         self.name = tempUser?.name ?? ""
         self.username = tempUser?.username ?? ""
         self.bie = tempUser?.bie ?? ""
+        
+        Task {
+            await loadUserCountInfo()
+        }
     }
     
     init(user: User) {
@@ -38,7 +53,10 @@ class ProfileViewModel : ObservableObject {
         self.username = user.username
         self.bie = user.bie ?? ""
         
-        checkFollow()
+        Task {
+            await checkFollow()
+            await loadUserCountInfo()
+        }
     }
     
     func convertImage(item: PhotosPickerItem?) async {
@@ -105,6 +123,7 @@ extension ProfileViewModel {
         Task {
             await AuthManager.shared.follow(userId: user?.id)
             user?.isFollowing = true
+            await loadUserCountInfo()
         }
     }
     
@@ -112,12 +131,21 @@ extension ProfileViewModel {
         Task {
             await AuthManager.shared.unfollow(userId: user?.id)
             user?.isFollowing = false
+            await loadUserCountInfo()
         }
     }
     
-    func checkFollow() {
-        Task {
-            self.user?.isFollowing =  await AuthManager.shared.checkFollow(userId: user?.id)
-        }
+    func checkFollow() async {
+        let userId = user?.id
+        self.user?.isFollowing =  await AuthManager.shared.checkFollow(userId: userId)
+        
+    }
+}
+
+
+extension ProfileViewModel {
+    func loadUserCountInfo() async {
+        self.user?.userCountInfo = await UserCountManager.loadUserCountInfo(userId: user?.id)
+        
     }
 }

@@ -41,7 +41,7 @@ struct FeedCellView: View {
                                 .foregroundStyle(.white)
                                 .bold()
                         }
-
+                        
                         Spacer()
                         
                         Image(systemName: "line.3.horizontal")
@@ -60,7 +60,7 @@ struct FeedCellView: View {
                     Image(systemName: isLike ? "heart.fill" : "heart")
                         .foregroundStyle(isLike ? .red : .primary)
                 }
-
+                
                 Button {
                     isCommentShowing = true
                 } label: {
@@ -91,7 +91,7 @@ struct FeedCellView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
             }
-    
+            
             Text("\(viewModel.post.date.relativeTimeString())")
                 .foregroundStyle(.gray)
                 .font(.footnote)
@@ -104,9 +104,15 @@ struct FeedCellView: View {
             CommentView(post: viewModel.post)
                 .presentationDragIndicator(.visible)
         }
+        .onChange(of: isCommentShowing) { newValue in
+            if newValue == false {
+                Task {
+                    await viewModel.loadCommentCount()
+                }
+            }
+        }
     }
 }
-
 //struct FeedCellView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        FeedCellView(post: Post(id: "iMP2FX2V6cDGwhMAodRw", userId: "GzaQsA3lFlaPyP9TJi9poTnEgG42", caption: "Panda", like: 0, imageUrl: "https://firebasestorage.googleapis.com:443/v0/b/instagramclone-a5529.appspot.com/o/images%2F4826A681-3158-43E0-AFD2-7D40E9CB2A39?alt=media&token=614cee3b-2b12-462f-bab5-1836fe8620b0", date: Date()))

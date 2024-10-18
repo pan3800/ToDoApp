@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CommentView: View {
     @State var commentText = ""
@@ -38,10 +39,18 @@ struct CommentView: View {
             
             Divider()
             HStack {
-                Image("profile_cat")
-                    .resizable()
-                    .frame(width: 35, height: 35)
-                    .clipShape(Circle())
+                if let imageUrl = AuthManager.shared.currentUser?.profileImageUrl {
+                    KFImage(URL(string: imageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 35, height: 35)
+                        .clipShape(Circle())
+                } else {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 35, height: 35)
+                        .clipShape(Circle())
+                }
                 
                 TextField("댓글 추가", text: $commentText, axis: .vertical)
                 Button {

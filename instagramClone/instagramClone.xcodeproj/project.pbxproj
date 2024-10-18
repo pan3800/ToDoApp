@@ -36,6 +36,7 @@
 		19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */; };
 		19606B372C5748BA00BFD462 /* SignupBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B362C5748BA00BFD462 /* SignupBackgroundView.swift */; };
 		19606B392C574F7400BFD462 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19606B382C574F7400BFD462 /* BlueButtonView.swift */; };
+		196F11692CC251470008B616 /* UserCountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F11682CC251470008B616 /* UserCountManager.swift */; };
 		197215242C7878A600A51F81 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197215232C7878A600A51F81 /* ProfileViewModel.swift */; };
 		197E28782C42627500CB3CB0 /* ImageFitAndFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */; };
 		1993BA612C4CF5E600752DEC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1993BA602C4CF5E600752DEC /* LoginView.swift */; };
@@ -105,6 +106,7 @@
 		19606B332C57461400BFD462 /* InstagramTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTextFieldModifier.swift; sourceTree = "<group>"; };
 		19606B362C5748BA00BFD462 /* SignupBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBackgroundView.swift; sourceTree = "<group>"; };
 		19606B382C574F7400BFD462 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		196F11682CC251470008B616 /* UserCountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCountManager.swift; sourceTree = "<group>"; };
 		1972151F2C78662F00A51F81 /* Dictionary.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Dictionary.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		197215232C7878A600A51F81 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		197E28772C42627500CB3CB0 /* ImageFitAndFillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFitAndFillView.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				191EF7202CB10AFB005517CD /* ImageManger.swift */,
 				19FB72622CBBA2100034F2F1 /* PostManager.swift */,
 				195424672CBCDEB9003602E0 /* CommentManager.swift */,
+				196F11682CC251470008B616 /* UserCountManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				19DEB74C2CB8F1CE0060AB56 /* SearchViewModel.swift in Sources */,
 				191F6AE32CB3B69500962828 /* FeedCellView.swift in Sources */,
 				1954246A2CBCE3B3003602E0 /* CommentViewModel.swift in Sources */,
+				196F11692CC251470008B616 /* UserCountManager.swift in Sources */,
 				193BC2FB2C51E59000BC8F8B /* EnterEmailView.swift in Sources */,
 				19606B342C57461400BFD462 /* InstagramTextFieldModifier.swift in Sources */,
 				19606B392C574F7400BFD462 /* BlueButtonView.swift in Sources */,
